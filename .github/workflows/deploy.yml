@@ -38,7 +38,7 @@ jobs:
         run: pnpm build-fast:pkg
 
       - name: Generate site
-        run: pnpm --filter=site run generate
+        run: pnpm --filter=site run build
         env:
           NUXT_PUBLIC_GOOGLE_FONTS_KEY: ${{ secrets.NUXT_PUBLIC_GOOGLE_FONTS_KEY }}
 

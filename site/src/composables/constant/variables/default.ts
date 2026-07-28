@@ -127,34 +127,34 @@ B.Eng. in Salad Engineering
 
 export const JAKE_STYLES = {
   marginV: 35,
-  marginH: 40,
+  marginH: 48,
   lineHeight: 1.2,
-  paragraphSpace: 4,
+  paragraphSpace: 6,
   themeColor: "#000000",
   fontCJK: {
     name: "华康宋体",
     fontFamily: "HKST"
   },
   fontEN: {
-    name: "Arial"
+    name: "EB Garamond"
   },
-  fontSize: 14,
+  fontSize: 15,
   paper: "A4"
 } as ResumeStyles;
 
 export const JAKE_MD_CONTENT = `---
 name: Jake Ryan
 header:
-  - text: <span class="iconify" data-icon="tabler:phone"></span> 123-456-7890
-  - text: <span class="iconify" data-icon="tabler:mail"></span> jake@example.com
-    link: mailto:jake@example.com
-  - text: <span class="iconify" data-icon="tabler:brand-github"></span> github.com/jake
-    link: https://github.com/jake
-  - text: <span class="iconify" data-icon="tabler:brand-linkedin"></span> linkedin.com/in/jake
+  - text: 123-456-7890
+  - text: jake@su.edu
+    link: mailto:jake@su.edu
+  - text: linkedin.com/in/jake
     link: https://linkedin.com/in/jake
+  - text: github.com/jake
+    link: https://github.com/jake
 ---
 
-<!-- Important: Replace all template content with your own information. -->
+<!-- Replace all content below with your own information. -->
 
 
 ## Education
@@ -162,67 +162,77 @@ header:
 **Southwestern University**
   ~ Georgetown, TX
 
-Bachelor of Arts in Computer Science, Minor in Business
-  ~ Aug 2018 – May 2021
+*Bachelor of Arts in Computer Science, Minor in Business*
+  ~ Aug. 2018 -- May 2021
 
 **Blinn College**
   ~ Bryan, TX
 
-Associate's in Liberal Arts
-  ~ Aug 2014 – May 2018
+*Associate's in Liberal Arts*
+  ~ Aug. 2014 -- May 2018
 
 
 ## Experience
 
 **Undergraduate Research Assistant**
-  ~ Texas A&M University
-  ~ Jan 2020 – Present
+  ~ June 2020 -- Present
 
-- Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems
-- Developed a full-stack web app using Flask, React, PostgreSQL, and Docker to analyze academic data
-- Explored methods to generate video from a single image using modified CVAE-GAN and x2 GAN architectures
+*Texas A&M University*
+  ~ College Station, TX
+
+- Designed and deployed a REST API using FastAPI and PostgreSQL to aggregate data from learning management systems, enabling analytics for 500+ students
+- Built a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data and surface collaboration insights for research teams
+- Explored ways to visualize GitHub collaboration in a classroom setting using interactive charts and network diagrams built with D3.js
+- Wrote Python scripts to automate weekly data collection and report generation, reducing manual processing time by 3+ hours per week
 
 **Information Technology Support Specialist**
-  ~ Southwestern University
-  ~ Sep 2018 – Present
+  ~ Sep. 2018 -- Present
 
-- Communicate with managers to set up campus computers used on campus
-- Assess and troubleshoot computer problems brought by students, faculty, and staff
-- Maintain upkeep of computers, AMX/Crestron, printers, and A/V equipment
+*Southwestern University*
+  ~ Georgetown, TX
+
+- Communicate with managers and department heads to configure, deploy, and track computers and peripherals across all campus buildings
+- Assess and troubleshoot computer problems brought by students, faculty and staff, resolving 95\% of tickets within 24 hours
+- Maintain upkeep of computers, classroom equipment, and 200 printers across campus
+- Image and deploy new machines using automated scripts, ensuring standardized software configurations and security baselines across all labs and offices
 
 **Artificial Intelligence Research Assistant**
-  ~ Southwestern University
-  ~ May 2019 – Jul 2019
+  ~ May 2019 -- July 2019
 
-- Explored methods to generate video from a single image
-- Developed an efficient and scalable REST API using FastAPI and PostgreSQL
-- Worked closely with a high-performing team in a fast-paced, deadline-driven environment
+*Southwestern University*
+  ~ Georgetown, TX
+
+- Explored methods to generate video game dungeons based off of *The Legend of Zelda*, researching graph-based and grammar-based layout algorithms
+- Developed a Java-based game and testing environment to evaluate the playability of procedurally generated dungeon layouts
+- Contributed 50K+ lines of code to an established codebase via Git, including generation modules, bug fixes, and automated regression tests
+- Conducted a human subject study with 30+ participants to determine which dungeon generation technique produces the most enjoyable gameplay
+- Wrote an 8-page research paper on procedural dungeon generation and presented findings at multiple academic venues, including the World Conference on Computational Intelligence
 
 
 ## Projects
 
-**Gitlytics** | Python, Flask, React, PostgreSQL, Docker
-  ~ Jun 2020 – Present
+**Gitlytics** | *Python, Flask, React, PostgreSQL, Docker*
+  ~ June 2020 -- Present
 
 - Developed a full-stack web application using Flask serving a REST API with React as the frontend
-- Implemented GitHub OAuth to retrieve data from user repositories
-- Visualized GitHub data to show collaboration patterns in software engineering teams
-- Used Celery and Redis for asynchronous task processing
+- Implemented GitHub OAuth to authenticate users and retrieve repository data including commits, pull requests, and contributor statistics
+- Visualized GitHub collaboration data using interactive charts highlighting contribution patterns across multiple repositories
 
-**Simple Paintball** | Lua
-  ~ May 2018 – Present
+**Simple Paintball** | *Spigot API, Java, Maven, TravisCI, Git*
+  ~ May 2018 -- May 2020
 
-- Developed a Roblox game using the Lua scripting language
-- Implemented physics interactions and core game mechanics
+- Developed a Minecraft server plugin to entertain kids during free time for a previous job
+- Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review
+- Implemented continuous delivery using TravisCI to automatically build and deploy the plugin upon each new release
 
 
 ## Technical Skills
 
 **Languages:** Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R
 
-**Frameworks:** React, Node.js, Flask, JUnit, WordPress, FastAPI
+**Frameworks:** React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI
 
-**Developer Tools:** Git, Docker, TravisCI, Google Cloud Platform, VS Code, IntelliJ, Eclipse
+**Developer Tools:** Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse
 
 **Libraries:** pandas, NumPy, Matplotlib
 `;
@@ -243,39 +253,37 @@ ${PREVIEW_SELECTOR} dl {
   margin: 0;
 }
 
-/* Headings */
-
-${PREVIEW_SELECTOR} h1,
-${PREVIEW_SELECTOR} h2,
-${PREVIEW_SELECTOR} h3 {
-  font-weight: bold;
-}
+/* Name — Huge, small-caps, bold, centered */
 
 ${PREVIEW_SELECTOR} h1 {
-  font-size: 2em;
-  text-align: center;
+  font-size: 2.2em;
+  font-variant: small-caps;
+  font-weight: bold;
+  line-height: 1;
 }
 
+/* Section headings — large, small-caps, NOT bold, with a full-width rule below */
+
 ${PREVIEW_SELECTOR} h2 {
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 4px;
+  font-size: 1.15em;
+  font-variant: small-caps;
+  font-weight: normal;
+  margin-bottom: 3px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 
 ${PREVIEW_SELECTOR} h3 {
   font-size: 1em;
-  margin-bottom: 2px;
+  font-weight: bold;
 }
 
 /* Lists */
 
 ${PREVIEW_SELECTOR} ul,
 ${PREVIEW_SELECTOR} ol {
-  padding-left: 1.4em;
-  margin: 0.15em 0;
+  padding-left: 1.2em;
+  margin: 0;
 }
 
 ${PREVIEW_SELECTOR} ul {
@@ -286,7 +294,12 @@ ${PREVIEW_SELECTOR} ol {
   list-style-type: decimal;
 }
 
-/* Definition Lists */
+${PREVIEW_SELECTOR} ul li {
+  font-size: 0.875em;
+  margin-top: 2px;
+}
+
+/* Definition lists — two-column: left label | right value */
 
 ${PREVIEW_SELECTOR} dl {
   display: flex;
@@ -299,6 +312,41 @@ ${PREVIEW_SELECTOR} dl dd:not(:last-child) {
 
 ${PREVIEW_SELECTOR} dl dd:last-child {
   text-align: right;
+  white-space: nowrap;
+  padding-left: 8px;
+}
+
+/* Row 2 of a subheading: the dl immediately after a dl whose dt contains bold text.
+   This matches degree/position rows (italic, slightly smaller). */
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl {
+  font-size: 0.9em;
+}
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl dt {
+  font-style: italic;
+}
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl dd {
+  font-style: italic;
+}
+
+/* Spacing: tight between a subheading row and its bullet list */
+
+${PREVIEW_SELECTOR} dl + ul {
+  margin-top: 2px;
+}
+
+/* Spacing: between entries when bullets precede the next subheading */
+
+${PREVIEW_SELECTOR} ul + dl {
+  margin-top: 6px;
+}
+
+/* Spacing: between Education entries (row2 dl → next row1 dl, no ul in between) */
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl + dl {
+  margin-top: 6px;
 }
 
 /* Tex */
@@ -326,11 +374,28 @@ ${PREVIEW_SELECTOR} .resume-header {
 ${PREVIEW_SELECTOR} .resume-header h1 {
   text-align: center;
   line-height: 1;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+${PREVIEW_SELECTOR} .resume-header-item {
+  font-size: 0.875em;
 }
 
 ${PREVIEW_SELECTOR} .resume-header-item:not(.no-separator)::after {
   content: " | ";
+}
+
+/* Header links are underlined black (matching LaTeX \\underline{}) */
+
+${PREVIEW_SELECTOR} .resume-header-item a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Body links have no underline (LaTeX [hidelinks]) */
+
+${PREVIEW_SELECTOR} :not(.resume-header-item) > a {
+  text-decoration: none;
 }
 
 /* Dark & print mode */
@@ -338,6 +403,10 @@ ${PREVIEW_SELECTOR} .resume-header-item:not(.no-separator)::after {
 
 .dark ${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
   background-color: hsl(213, 12%, 15%);
+  color: hsl(216, 12%, 84%);
+}
+
+.dark ${PREVIEW_SELECTOR} .resume-header-item a {
   color: hsl(216, 12%, 84%);
 }
 

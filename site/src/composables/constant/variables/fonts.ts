@@ -25,6 +25,9 @@ export const LOCAL_EN_FONTS: Font[] = [
     name: "Courier New"
   },
   {
+    name: "EB Garamond"
+  },
+  {
     name: "Euclid"
   },
   {

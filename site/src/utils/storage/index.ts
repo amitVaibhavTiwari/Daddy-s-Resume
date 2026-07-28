@@ -27,14 +27,18 @@ export class StorageService {
     this._db = AVAILABLE_SERVICES[service];
   }
 
-  private _createEmptyResume(): DbResumeEmpty {
-    const { DEFAULT } = useConstant();
+  private _createEmptyResume(templateId?: string): DbResumeEmpty {
+    const { DEFAULT, TEMPLATES } = useConstant();
+
+    const template = templateId
+      ? TEMPLATES.find((t) => t.id === templateId)
+      : undefined;
 
     return {
       name: DEFAULT.RESUME_NAME,
-      markdown: DEFAULT.MD_CONTENT,
-      css: DEFAULT.CSS_CONTENT,
-      styles: DEFAULT.STYLES
+      markdown: template?.markdown ?? DEFAULT.MD_CONTENT,
+      css: template?.css ?? DEFAULT.CSS_CONTENT,
+      styles: template?.styles ?? DEFAULT.STYLES
     };
   }
 
@@ -63,8 +67,8 @@ export class StorageService {
     return updatedData;
   }
 
-  public async createResume() {
-    const { data, error } = await this._db.create(this._createEmptyResume());
+  public async createResume(templateId?: string) {
+    const { data, error } = await this._db.create(this._createEmptyResume(templateId));
 
     if (error) {
       // TODO: Use toast to show error message

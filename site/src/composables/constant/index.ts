@@ -48,6 +48,25 @@ export const useConstant = () => {
     CSS_CONTENT: V.DEFAULT_CSS_CONTENT
   };
 
+  const TEMPLATES = [
+    {
+      id: "default" as const,
+      name: "Classic",
+      description: "Academic style with publications and CJK support",
+      styles: V.DEFAULT_STYLES,
+      markdown: V.DEFAULT_MD_CONTENT,
+      css: V.DEFAULT_CSS_CONTENT
+    },
+    {
+      id: "jake" as const,
+      name: "Jake's Resume",
+      description: "Clean, minimal style for software engineers",
+      styles: V.JAKE_STYLES,
+      markdown: V.JAKE_MD_CONTENT,
+      css: V.JAKE_CSS_CONTENT
+    }
+  ];
+
   const VERSION = {
     CURRENT: V.CURRENT_VERSION,
     EMPTY_FALLBACK: V.EMPTY_VERSION_FALLBACK,
@@ -63,6 +82,7 @@ export const useConstant = () => {
     RENDER,
     COLOR,
     DEFAULT,
+    TEMPLATES,
     VERSION
   };
 };

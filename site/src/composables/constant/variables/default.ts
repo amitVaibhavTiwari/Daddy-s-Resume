@@ -125,6 +125,230 @@ B.Eng. in Salad Engineering
 **Languages:** Chinese (native), English (proficient)
 `;
 
+export const JAKE_STYLES = {
+  marginV: 35,
+  marginH: 40,
+  lineHeight: 1.2,
+  paragraphSpace: 4,
+  themeColor: "#000000",
+  fontCJK: {
+    name: "华康宋体",
+    fontFamily: "HKST"
+  },
+  fontEN: {
+    name: "Arial"
+  },
+  fontSize: 14,
+  paper: "A4"
+} as ResumeStyles;
+
+export const JAKE_MD_CONTENT = `---
+name: Jake Ryan
+header:
+  - text: <span class="iconify" data-icon="tabler:phone"></span> 123-456-7890
+  - text: <span class="iconify" data-icon="tabler:mail"></span> jake@example.com
+    link: mailto:jake@example.com
+  - text: <span class="iconify" data-icon="tabler:brand-github"></span> github.com/jake
+    link: https://github.com/jake
+  - text: <span class="iconify" data-icon="tabler:brand-linkedin"></span> linkedin.com/in/jake
+    link: https://linkedin.com/in/jake
+---
+
+<!-- Important: Replace all template content with your own information. -->
+
+
+## Education
+
+**Southwestern University**
+  ~ Georgetown, TX
+
+Bachelor of Arts in Computer Science, Minor in Business
+  ~ Aug 2018 – May 2021
+
+**Blinn College**
+  ~ Bryan, TX
+
+Associate's in Liberal Arts
+  ~ Aug 2014 – May 2018
+
+
+## Experience
+
+**Undergraduate Research Assistant**
+  ~ Texas A&M University
+  ~ Jan 2020 – Present
+
+- Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems
+- Developed a full-stack web app using Flask, React, PostgreSQL, and Docker to analyze academic data
+- Explored methods to generate video from a single image using modified CVAE-GAN and x2 GAN architectures
+
+**Information Technology Support Specialist**
+  ~ Southwestern University
+  ~ Sep 2018 – Present
+
+- Communicate with managers to set up campus computers used on campus
+- Assess and troubleshoot computer problems brought by students, faculty, and staff
+- Maintain upkeep of computers, AMX/Crestron, printers, and A/V equipment
+
+**Artificial Intelligence Research Assistant**
+  ~ Southwestern University
+  ~ May 2019 – Jul 2019
+
+- Explored methods to generate video from a single image
+- Developed an efficient and scalable REST API using FastAPI and PostgreSQL
+- Worked closely with a high-performing team in a fast-paced, deadline-driven environment
+
+
+## Projects
+
+**Gitlytics** | Python, Flask, React, PostgreSQL, Docker
+  ~ Jun 2020 – Present
+
+- Developed a full-stack web application using Flask serving a REST API with React as the frontend
+- Implemented GitHub OAuth to retrieve data from user repositories
+- Visualized GitHub data to show collaboration patterns in software engineering teams
+- Used Celery and Redis for asynchronous task processing
+
+**Simple Paintball** | Lua
+  ~ May 2018 – Present
+
+- Developed a Roblox game using the Lua scripting language
+- Implemented physics interactions and core game mechanics
+
+
+## Technical Skills
+
+**Languages:** Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R
+
+**Frameworks:** React, Node.js, Flask, JUnit, WordPress, FastAPI
+
+**Developer Tools:** Git, Docker, TravisCI, Google Cloud Platform, VS Code, IntelliJ, Eclipse
+
+**Libraries:** pandas, NumPy, Matplotlib
+`;
+
+export const JAKE_CSS_CONTENT = `/* Backbone CSS for Jake's Resume */
+
+/* Basic */
+
+${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+
+${PREVIEW_SELECTOR} p,
+${PREVIEW_SELECTOR} li,
+${PREVIEW_SELECTOR} dl {
+  margin: 0;
+}
+
+/* Headings */
+
+${PREVIEW_SELECTOR} h1,
+${PREVIEW_SELECTOR} h2,
+${PREVIEW_SELECTOR} h3 {
+  font-weight: bold;
+}
+
+${PREVIEW_SELECTOR} h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+${PREVIEW_SELECTOR} h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+${PREVIEW_SELECTOR} h3 {
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+/* Lists */
+
+${PREVIEW_SELECTOR} ul,
+${PREVIEW_SELECTOR} ol {
+  padding-left: 1.4em;
+  margin: 0.15em 0;
+}
+
+${PREVIEW_SELECTOR} ul {
+  list-style-type: disc;
+}
+
+${PREVIEW_SELECTOR} ol {
+  list-style-type: decimal;
+}
+
+/* Definition Lists */
+
+${PREVIEW_SELECTOR} dl {
+  display: flex;
+}
+
+${PREVIEW_SELECTOR} dl dt,
+${PREVIEW_SELECTOR} dl dd:not(:last-child) {
+  flex: 1;
+}
+
+${PREVIEW_SELECTOR} dl dd:last-child {
+  text-align: right;
+}
+
+/* Tex */
+
+${PREVIEW_SELECTOR} :not(span.katex-display) > span.katex {
+  font-size: 1em !important;
+}
+
+/* SVG & Images */
+
+${PREVIEW_SELECTOR} svg.iconify {
+  vertical-align: -0.2em;
+}
+
+${PREVIEW_SELECTOR} img {
+  max-width: 100%;
+}
+
+/* Header */
+
+${PREVIEW_SELECTOR} .resume-header {
+  text-align: center;
+}
+
+${PREVIEW_SELECTOR} .resume-header h1 {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+${PREVIEW_SELECTOR} .resume-header-item:not(.no-separator)::after {
+  content: " | ";
+}
+
+/* Dark & print mode */
+/* You might want to comment out the following lines if you change the background or text color. */
+
+.dark ${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: hsl(213, 12%, 15%);
+  color: hsl(216, 12%, 84%);
+}
+
+@media print {
+  .dark ${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+    background-color: white;
+    color: black;
+  }
+}
+`;
+
 export const DEFAULT_CSS_CONTENT = `/* Backbone CSS for Resume Template 1 */
 
 /* Basic */

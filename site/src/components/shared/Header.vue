@@ -1,7 +1,6 @@
 <template>
   <header class="hstack justify-between pl-4 pr-1">
     <nuxt-link class="hstack gap-x-2" :to="$nuxt.$localePath('/')">
-      <SharedLogo text-base />
       <div text-lg><SharedBrandName /></div>
     </nuxt-link>
 
@@ -55,7 +54,7 @@
         as="a"
         variant="ghost-secondary"
         size="round"
-        href="http://github.com/Renovamen/oh-my-cv"
+        href="https://github.com/amitVaibhavTiwari/Markdown-Resume"
         target="_blank"
         rel="nofollow noopener"
       >

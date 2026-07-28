@@ -5,8 +5,8 @@ open_toolbar: Open toolbar
 close_toolbar: Close toolbar
 
 head:
-  title: Oh My CV! - Free Online Resume Maker
-  desc: Free online resume maker, allows you to create your resume in minutes with Markdown!
+  title: Markdown Resume - Free Online Resume Maker
+  desc: Free online resume maker. Write your resume in Markdown and export to PDF in seconds.
   keywords: resume maker, cv maker, curriculum vitae maker, markdown resume
 
 landing:
@@ -15,7 +15,7 @@ landing:
   start: Create My Resume
   feats:
     - title: Simple and Powerful
-      items: Manage multiple resumes<br>Real-time preview<br>Export to PDF<br>Fully customizable<br>Choose fonts and add icons<br>And <a href="https://github.com/Renovamen/oh-my-cv#features" target="_blank">more features</a>
+      items: Manage multiple resumes<br>Real-time preview<br>Export to PDF<br>Fully customizable<br>Choose fonts and add icons<br>And <a href="https://github.com/amitVaibhavTiwari/Markdown-Resume#features" target="_blank">more features</a>
     - title: Privacy First
       items: Open source and free<br>All data is saved locally<br>No login or registration needed<br>No user tracking<br>No ads
 

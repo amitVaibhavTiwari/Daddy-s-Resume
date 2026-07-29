@@ -138,7 +138,7 @@ export const JAKE_STYLES = {
   fontEN: {
     name: "EB Garamond"
   },
-  fontSize: 15,
+  fontSize: 16,
   paper: "A4"
 } as ResumeStyles;
 
@@ -180,10 +180,9 @@ header:
 *Texas A&M University*
   ~ College Station, TX
 
-- Designed and deployed a REST API using FastAPI and PostgreSQL to aggregate data from learning management systems, enabling analytics for 500+ students
-- Built a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data and surface collaboration insights for research teams
-- Explored ways to visualize GitHub collaboration in a classroom setting using interactive charts and network diagrams built with D3.js
-- Wrote Python scripts to automate weekly data collection and report generation, reducing manual processing time by 3+ hours per week
+- Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems
+- Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data
+- Explored ways to visualize GitHub collaboration in a classroom setting
 
 **Information Technology Support Specialist**
   ~ Sep. 2018 -- Present
@@ -191,10 +190,9 @@ header:
 *Southwestern University*
   ~ Georgetown, TX
 
-- Communicate with managers and department heads to configure, deploy, and track computers and peripherals across all campus buildings
-- Assess and troubleshoot computer problems brought by students, faculty and staff, resolving 95\% of tickets within 24 hours
+- Communicate with managers to set up campus computers used on campus
+- Assess and troubleshoot computer problems brought by students, faculty and staff
 - Maintain upkeep of computers, classroom equipment, and 200 printers across campus
-- Image and deploy new machines using automated scripts, ensuring standardized software configurations and security baselines across all labs and offices
 
 **Artificial Intelligence Research Assistant**
   ~ May 2019 -- July 2019
@@ -202,11 +200,12 @@ header:
 *Southwestern University*
   ~ Georgetown, TX
 
-- Explored methods to generate video game dungeons based off of *The Legend of Zelda*, researching graph-based and grammar-based layout algorithms
-- Developed a Java-based game and testing environment to evaluate the playability of procedurally generated dungeon layouts
-- Contributed 50K+ lines of code to an established codebase via Git, including generation modules, bug fixes, and automated regression tests
-- Conducted a human subject study with 30+ participants to determine which dungeon generation technique produces the most enjoyable gameplay
-- Wrote an 8-page research paper on procedural dungeon generation and presented findings at multiple academic venues, including the World Conference on Computational Intelligence
+- Explored methods to generate video game dungeons based off of *The Legend of Zelda*
+- Developed a game in Java to test the generated dungeons
+- Contributed 50K+ lines of code to an established codebase via Git
+- Conducted a human subject study to determine which video game dungeon generation technique is enjoyable
+- Wrote an 8-page paper and gave multiple presentations on-campus
+- Presented virtually to the World Conference on Computational Intelligence
 
 
 ## Projects
@@ -214,16 +213,18 @@ header:
 **Gitlytics** | *Python, Flask, React, PostgreSQL, Docker*
   ~ June 2020 -- Present
 
-- Developed a full-stack web application using Flask serving a REST API with React as the frontend
-- Implemented GitHub OAuth to authenticate users and retrieve repository data including commits, pull requests, and contributor statistics
-- Visualized GitHub collaboration data using interactive charts highlighting contribution patterns across multiple repositories
+- Developed a full-stack web application using with Flask serving a REST API with React as the frontend
+- Implemented GitHub OAuth to get data from user's repositories
+- Visualized GitHub data to show collaboration
+- Used Celery and Redis for asynchronous tasks
 
 **Simple Paintball** | *Spigot API, Java, Maven, TravisCI, Git*
   ~ May 2018 -- May 2020
 
 - Developed a Minecraft server plugin to entertain kids during free time for a previous job
 - Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review
-- Implemented continuous delivery using TravisCI to automatically build and deploy the plugin upon each new release
+- Implemented continuous delivery using TravisCI to build the plugin upon new a release
+- Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin
 
 
 ## Technical Skills
@@ -253,6 +254,15 @@ ${PREVIEW_SELECTOR} dl {
   margin: 0;
 }
 
+${PREVIEW_SELECTOR} :not(li) > p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+${PREVIEW_SELECTOR} strong {
+  font-weight: 600;
+}
+
 /* Name — Huge, small-caps, bold, centered */
 
 ${PREVIEW_SELECTOR} h1 {
@@ -269,9 +279,9 @@ ${PREVIEW_SELECTOR} h2 {
   font-variant: small-caps;
   font-weight: normal;
   margin-bottom: 3px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  border-bottom: .5px solid rgba(0,0,0,0.45) !important;
 }
+
 
 ${PREVIEW_SELECTOR} h3 {
   font-size: 1em;
@@ -284,6 +294,8 @@ ${PREVIEW_SELECTOR} ul,
 ${PREVIEW_SELECTOR} ol {
   padding-left: 1.2em;
   margin: 0;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 ${PREVIEW_SELECTOR} ul {
@@ -295,7 +307,7 @@ ${PREVIEW_SELECTOR} ol {
 }
 
 ${PREVIEW_SELECTOR} ul li {
-  font-size: 0.875em;
+  font-size: 0.925em;
   margin-top: 2px;
 }
 
@@ -303,6 +315,8 @@ ${PREVIEW_SELECTOR} ul li {
 
 ${PREVIEW_SELECTOR} dl {
   display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 ${PREVIEW_SELECTOR} dl dt,
@@ -390,6 +404,7 @@ ${PREVIEW_SELECTOR} .resume-header-item:not(.no-separator)::after {
 ${PREVIEW_SELECTOR} .resume-header-item a {
   color: black;
   text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.45) !important;
 }
 
 /* Body links have no underline (LaTeX [hidelinks]) */

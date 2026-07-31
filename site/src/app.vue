@@ -12,6 +12,8 @@ const { t, locale } = useI18n();
 const colorMode = useColorMode();
 const preferredDark = usePreferredDark();
 
+colorMode.preference = "light";
+
 useHead({
   title: t("head.title"),
   meta: [

@@ -5,7 +5,10 @@
     <div class="workspace max-w-310 mx-auto" flex="~ col" p="x-4 y-8">
       <div class="px-2 space-y-2" md="hstack justify-between">
         <h1 font-bold text-3xl>{{ $t("dashboard.my_resumes") }}</h1>
-        <DashboardFile @update="refresh" />
+        <div class="flex gap-2 flex-wrap items-center">
+          <DashboardDriveSync @update="refresh" />
+          <DashboardFile @update="refresh" />
+        </div>
       </div>
 
       <UiScrollArea class="flex-1 mt-4 px-2">

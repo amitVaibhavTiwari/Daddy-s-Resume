@@ -6,6 +6,7 @@ export type DbResumeEmpty = {
   markdown: string;
   css: string;
   styles: ResumeStyles;
+  drive_synced?: boolean;
 };
 
 export interface DbResume extends DbResumeEmpty {

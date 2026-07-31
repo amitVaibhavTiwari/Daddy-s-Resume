@@ -48,7 +48,7 @@
 
       <slot name="tail" />
 
-      <SharedToggleDark />
+      <!-- <SharedToggleDark /> -->
 
       <UiButton
         as="a"

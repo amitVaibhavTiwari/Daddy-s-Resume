@@ -32,12 +32,14 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      googleFontsKey: ""
+      googleFontsKey: "",
+      googleClientId: ""
     }
   },
 
   colorMode: {
-    classSuffix: ""
+    classSuffix: "",
+    preference: "light"
   },
 
   app: {

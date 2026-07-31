@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /templates
+Disallow: /dashboard
+Disallow: /editor/
 
 Sitemap: https://markdownresume.amitvaibhavtiwari.dev/sitemap.xml

@@ -5,9 +5,9 @@ open_toolbar: Open toolbar
 close_toolbar: Close toolbar
 
 head:
-  title: Daddy's Resume - Resume Builder in Markdown
-  desc: Write your resume in Markdown, preview in real time, export to PDF. Local-first, open source, no accounts.
-  keywords: resume maker, cv maker, markdown resume, MDResume, local resume builder
+  title: "Daddy's Resume - Free Markdown Resume Builder | No Signup, ATS-Friendly"
+  desc: "Build your resume for free using Markdown. Real-time PDF preview, ATS-friendly templates, no account needed. Your data stays in your browser. Export to PDF in one click."
+  keywords: "markdown resume builder, free resume builder, free resume builder online, ATS resume builder, resume builder no signup, resume builder no login, free resume maker, resume builder no account, pdf resume builder, markdown resume, free cv builder, resume builder browser, open source resume builder"
 
 landing:
   hero: Write your <span text-primary>resumes</span> in Markdown!

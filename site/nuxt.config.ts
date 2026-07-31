@@ -61,8 +61,8 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "application-name", content: "Markdown Resume" },
-        { name: "apple-mobile-web-app-title", content: "Markdown Resume" },
+        { name: "application-name", content: "Daddy's Resume" },
+        { name: "apple-mobile-web-app-title", content: "Daddy's Resume" },
         { name: "msapplication-TileColor", content: "#fff" },
         { property: "og:url", content: "https://markdownresume.amitvaibhavtiwari.dev" },
         { property: "og:type", content: "website" }

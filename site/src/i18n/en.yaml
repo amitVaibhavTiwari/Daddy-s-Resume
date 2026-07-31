@@ -5,9 +5,9 @@ open_toolbar: Open toolbar
 close_toolbar: Close toolbar
 
 head:
-  title: Markdown Resume - Free Online Resume Maker
-  desc: Free online resume maker. Write your resume in Markdown and export to PDF in seconds.
-  keywords: resume maker, cv maker, curriculum vitae maker, markdown resume
+  title: Daddy's Resume - Resume Builder in Markdown
+  desc: Write your resume in Markdown, preview in real time, export to PDF. Local-first, open source, no accounts.
+  keywords: resume maker, cv maker, markdown resume, MDResume, local resume builder
 
 landing:
   hero: Write your <span text-primary>resumes</span> in Markdown!

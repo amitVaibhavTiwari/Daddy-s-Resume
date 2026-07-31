@@ -46,8 +46,8 @@ export default defineNuxtConfig({
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
-        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#222" },
+        { rel: "icon", type: "image/png", href: "/logo.png" },
+        { rel: "apple-touch-icon", href: "/logo.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         {

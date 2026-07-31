@@ -2,34 +2,12 @@
   <div class="flex w-72 h-full">
     <div
       id="toolbar"
-      class="pane-container overflow-y-scroll hide-scrollbar bg-background"
+      class="pane-container overflow-y-scroll hide-scrollbar bg-background w-full"
       lt-lg="bg-accent rounded-none"
     >
       <template v-for="(tool, i) in tools" :key="tool.id">
         <component :is="tool.component" :id="`toolbar-${tool.id}`" />
         <UiSeparator v-if="i < tools.length - 1" class="w-[calc(100%-32px)] mx-auto" />
-      </template>
-    </div>
-
-    <div flex="center col none gap-1" border="l dashed lg:none" w-10 bg-accent>
-      <template v-for="tool in tools" :key="tool.id">
-        <UiTooltipProvider :delay-duration="0">
-          <UiTooltip>
-            <UiTooltipTrigger as-child>
-              <UiButton
-                size="round"
-                variant="ghost-secondary"
-                @click="scrollTo(tool.id)"
-                :aria-label="getTooltip(tool.id)"
-              >
-                <span :class="[tool.icon, ' size-4']" />
-              </UiButton>
-            </UiTooltipTrigger>
-            <UiTooltipContent side="left">
-              {{ getTooltip(tool.id) }}
-            </UiTooltipContent>
-          </UiTooltip>
-        </UiTooltipProvider>
       </template>
     </div>
   </div>

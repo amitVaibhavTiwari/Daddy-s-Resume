@@ -1,5 +1,5 @@
 <template>
-  <header class="hstack justify-between px-8 py-3 pt-7">
+  <header class="hstack justify-between px-8 py-3 pt-7 bg-transparent">
     <nuxt-link class="hstack gap-x-2" :to="$nuxt.$localePath('/')">
       <img :src="'/logo.png'" alt="Daddy's Resume" class="h-16 w-auto" />
     </nuxt-link>

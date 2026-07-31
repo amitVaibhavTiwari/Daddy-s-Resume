@@ -1,17 +1,13 @@
 <template>
   <div class="flex gap-2">
-    <UiButton :disabled="syncing || !clientId" @click="handleSync">
-      <span v-if="syncing" i-svg-spinners:3-dots-fade size-4 mr-1 />
-      <span v-else i-ic:baseline-cloud-upload size-4 mr-1 />
+    <UiButton variant="outline" :disabled="syncing || !clientId" @click="handleSync">
+      <span v-if="syncing" class="i-svg-spinners:3-dots-fade size-4 mr-1.5" />
+      <span v-else class="i-ic:baseline-cloud-upload size-4 mr-1.5" />
       {{ syncing ? "Syncing..." : "Sync to Drive" }}
     </UiButton>
-    <UiButton
-      :disabled="importing || !clientId"
-      class="bg-neutral-800 hover:(bg-neutral-800/90 ring-neutral-800/40) dark:(bg-secondary hover:bg-background hover:ring-secondary/40)"
-      @click="handleImport"
-    >
-      <span v-if="importing" i-svg-spinners:3-dots-fade size-4 mr-1 />
-      <span v-else i-ic:baseline-cloud-download size-4 mr-1 />
+    <UiButton variant="outline" :disabled="importing || !clientId" @click="handleImport">
+      <span v-if="importing" class="i-svg-spinners:3-dots-fade size-4 mr-1.5" />
+      <span v-else class="i-ic:baseline-cloud-download size-4 mr-1.5" />
       {{ importing ? "Importing..." : "Import from Drive" }}
     </UiButton>
   </div>

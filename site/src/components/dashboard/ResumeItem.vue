@@ -1,14 +1,13 @@
 <template>
-  <div w-56>
-    <div h-80>
-      <div class="resume-card group/card size-fit">
+  <div class="w-64">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group/card hover:shadow-md transition-shadow duration-200">
+
+      <!-- Preview area — fills full card width -->
+      <div class="relative bg-gray-50">
         <nuxt-link
           :to="$nuxt.$localePath(`/editor/${props.resume.id}`)"
-          class="block border overflow-hidden rounded-md ring-when-focus peer"
-          :style="{
-            width: `${size.w}px`,
-            height: `${size.h}px`
-          }"
+          class="block ring-when-focus peer"
+          :style="{ width: `${previewW}px`, height: `${previewH}px` }"
         >
           <SharedResumeRender
             :id="resume.id"
@@ -16,22 +15,24 @@
             :markdown="resume.markdown"
             :styles="resume.styles"
             class="origin-top-left"
-            :style="{
-              transform: `scale(${1 / PAPER.MM_TO_PX})`
-            }"
+            :style="{ transform: `scale(${previewScale / PAPER.MM_TO_PX})` }"
           />
         </nuxt-link>
 
         <DashboardResumeOptions
           class="opacity-0 group-hover/card:opacity-100 peer-focus-within:opacity-100 focus-within:opacity-100"
-          pos="absolute right-3 top-3"
+          pos="absolute right-2 top-2"
           :resume="resume"
           @update="emit('update')"
         />
       </div>
-    </div>
 
-    <DashboardResumeInfo :resume="resume" />
+      <!-- Info area -->
+      <div class="border-t border-gray-100 px-3 py-3">
+        <DashboardResumeInfo :resume="resume" />
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -51,24 +52,25 @@ const emit = defineEmits<{
 const { PAPER } = useConstant();
 const size = PAPER.SIZES[props.resume.styles.paper];
 
+// Scale preview to fill the card width (256px = w-64)
+const CARD_WIDTH = 256;
+const previewScale = CARD_WIDTH / size.w;
+const previewW = CARD_WIDTH;
+const previewH = Math.round(size.h * previewScale);
+
 const renderRef = ref<InstanceType<typeof SharedResumeRender>>();
 
 onMounted(async () => {
-  // set styles that are defined via CSS editor
   dynamicCssService.injectCssEditor(props.resume.css, props.resume.id);
-  // load Google fonts
   await googleFontsService.resolve(props.resume.styles.fontEN);
   await googleFontsService.resolve(props.resume.styles.fontCJK);
-  // set styles that are defined via toolbar
   dynamicCssService.injectToolbar(props.resume.styles, props.resume.id);
-  // force update resume render
   await delay(100);
   renderRef.value?.render();
 });
 </script>
 
 <style scoped>
-/* Only need to show the first page of the resume card */
 :deep(.resume-render) > *:not(:first-child) {
   @apply hidden;
 }

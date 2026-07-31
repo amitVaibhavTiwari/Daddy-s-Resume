@@ -1,25 +1,23 @@
 <template>
-  <div class="bg-white min-h-screen">
+  <div class="bg-gray-50 min-h-screen">
     <SharedHeader />
 
-    <div class="max-w-5xl mx-auto px-6 lg:px-12 pt-16 pb-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-10 pb-16">
       <!-- Heading -->
-      <div class="mb-14">
-        <h1 class="text-4xl font-bold text-gray-900 tracking-tight mb-3">Templates</h1>
-        <p class="text-gray-500 text-lg">
-          Pick a starting point. Customize everything from there.
-        </p>
+      <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1">Templates</h1>
+        <p class="text-gray-400 text-sm">Pick a starting point. Customize everything from there.</p>
       </div>
 
       <!-- Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="flex flex-wrap gap-6">
         <div
           v-for="t in templates"
           :key="t.id"
-          class="border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+          class="w-64 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200"
         >
-          <!-- Screenshot area -->
-          <div class="bg-gray-50 border-b border-gray-100 aspect-[210/270] flex items-center justify-center relative overflow-hidden">
+          <!-- Screenshot area — matches resume card preview height -->
+          <div class="bg-gray-50 border-b border-gray-100 flex items-center justify-center relative overflow-hidden" style="height: 364px">
             <img
               v-if="t.screenshot"
               :src="t.screenshot"
@@ -27,41 +25,38 @@
               class="w-full h-full object-cover object-top"
             />
             <div v-else class="text-center text-gray-300 select-none">
-              <span class="i-ic:baseline-insert-drive-file text-6xl block mb-2" />
-              <span class="text-sm font-medium">Preview coming soon</span>
+              <span class="i-ic:baseline-insert-drive-file text-5xl block mb-2" />
+              <span class="text-xs font-medium">Preview coming soon</span>
             </div>
           </div>
 
           <!-- Info -->
-          <div class="p-6">
-            <div class="mb-4">
-              <h2 class="text-xl font-bold text-gray-900 mb-1">{{ t.name }}</h2>
-              <p class="text-xs text-gray-500 font-medium mb-3">{{ t.inspired }}</p>
-              <p class="text-sm text-gray-500 leading-relaxed">{{ t.desc }}</p>
-            </div>
+          <div class="px-3 py-3 border-t border-gray-100">
+            <div class="font-semibold text-gray-800 text-sm mb-0.5">{{ t.name }}</div>
+            <div class="text-[11px] text-gray-400 mb-2">{{ t.inspired }}</div>
+            <p class="text-[11px] text-gray-500 leading-relaxed mb-3">{{ t.desc }}</p>
 
-            <div class="flex gap-3 pt-2">
-              <UiButton class="flex-1" :disabled="creating === t.id" @click="useTemplate(t.id)">
-                <span v-if="creating === t.id" class="i-svg-spinners:3-dots-fade size-4 mr-1" />
+            <div class="flex gap-2">
+              <UiButton class="flex-1 h-8 text-xs" :disabled="creating === t.id" @click="useTemplate(t.id)">
+                <span v-if="creating === t.id" class="i-svg-spinners:3-dots-fade size-3.5 mr-1" />
                 {{ creating === t.id ? "Opening..." : "Use Template" }}
               </UiButton>
               <a
                 :href="t.sample"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="h-9 px-4 text-sm font-medium inline-flex items-center gap-1.5 text-gray-600 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
+                class="h-8 px-3 text-xs font-medium inline-flex items-center gap-1 text-gray-600 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
                 :class="{ 'pointer-events-none opacity-40': !t.sample }"
               >
-                <span class="i-ic:baseline-download text-base" />
-                Sample PDF
+                <span class="i-ic:baseline-download text-sm" />
+                PDF
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- More coming -->
-      <p class="mt-12 text-sm text-gray-400 text-center">More templates coming soon.</p>
+      <p class="mt-10 text-xs text-gray-400">More templates coming soon.</p>
     </div>
   </div>
 </template>
@@ -77,7 +72,7 @@ const templates = [
     id: "default",
     name: "Template 1",
     inspired: "Inspired by Brilliant Resume",
-    desc: "A classic, academic-style resume with support for publications, CJK fonts, and detailed section formatting. Great for researchers and academics.",
+    desc: "Classic academic style. Great for researchers and detailed formatting.",
     screenshot: "",
     sample: ""
   },
@@ -85,7 +80,7 @@ const templates = [
     id: "jake",
     name: "Template 2",
     inspired: "Inspired by Jake's Resume by Jake Gutierrez",
-    desc: "Clean, minimal layout built for software engineers. Small-caps headings, tight spacing, and a structured two-column entry format.",
+    desc: "Clean, minimal layout for software engineers. Tight spacing, structured entries.",
     screenshot: "",
     sample: ""
   }

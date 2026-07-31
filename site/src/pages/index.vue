@@ -8,8 +8,9 @@
         Make your resumes<br/>the quick and easy way.
       </h1>
       <p class="text-lg text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto">
-        Use prebuilt ATS-friendly templates to write your resume in Markdown with real-time preview
-        and PDF export, all inside your browser. Sync to your own Google Drive, so your data always stays yours.
+        Write your resume in Markdown with prebuilt ATS-friendly templates. Preview changes in real time,
+        export to PDF, and keep your data stored locally in your browser. Sync with Google Drive,
+        so your data always stays yours.
       </p>
       <div class="flex items-center justify-center gap-3 flex-wrap">
         <UiButton
@@ -31,81 +32,11 @@
       </div>
     </section>
 
-    <!-- ── Editor mock ── -->
-    <section class="px-6 lg:px-12 pb-24 max-w-5xl mx-auto">
+    <!-- ── Editor screenshot ── -->
+    <section class="px-6 lg:px-12 pb-24 max-w-7xl mx-auto">
       <div class="relative">
-        <div class="relative rounded-xl overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
-          <!-- Window chrome -->
-          <div class="bg-[#1e1e2e] px-4 py-3 flex items-center gap-3">
-            <div class="flex gap-1.5">
-              <div class="size-3 rounded-full bg-[#ff5f57]" />
-              <div class="size-3 rounded-full bg-[#febc2e]" />
-              <div class="size-3 rounded-full bg-[#28c840]" />
-            </div>
-            <div class="text-xs text-gray-400 font-mono ml-2">resume.md — Daddy's Resume</div>
-          </div>
-
-          <!-- Split pane -->
-          <div class="flex h-96">
-            <!-- Markdown editor -->
-            <div class="w-1/2 bg-[#1e1e2e] p-5 font-mono text-[11px] leading-[1.75] border-r border-white/5 overflow-hidden select-none">
-              <div class="text-violet-400">---</div>
-              <div><span class="text-blue-300">name</span><span class="text-gray-500">: </span><span class="text-green-300">Jake Ryan</span></div>
-              <div><span class="text-blue-300">header</span><span class="text-gray-500">:</span></div>
-              <div class="pl-3"><span class="text-gray-500">- </span><span class="text-blue-300">text</span><span class="text-gray-500">: </span><span class="text-green-300">jake@su.edu</span></div>
-              <div class="pl-3"><span class="text-gray-500">- </span><span class="text-blue-300">text</span><span class="text-gray-500">: </span><span class="text-green-300">github.com/jake</span></div>
-              <div class="text-violet-400">---</div>
-              <div class="mt-3 text-violet-400">## Education</div>
-              <div class="mt-1"><span class="text-rose-300 font-semibold">**Southwestern University**</span></div>
-              <div class="text-gray-500 pl-2">~ Georgetown, TX</div>
-              <div class="mt-1 text-gray-400 italic">*B.A. Computer Science*</div>
-              <div class="text-gray-500 pl-2">~ 2018 -- 2021</div>
-              <div class="mt-3 text-violet-400">## Experience</div>
-              <div class="mt-1"><span class="text-rose-300 font-semibold">**Software Engineer**</span></div>
-              <div class="text-gray-500 pl-2">~ Jan 2022 -- Present</div>
-              <div class="mt-1 text-gray-400">- Built REST APIs used by 500+ users</div>
-              <div class="text-gray-400">- Reduced page load time by 40%</div>
-              <div class="text-gray-400">- Shipped 3 products end-to-end</div>
-              <div class="mt-3 text-violet-400">## Skills</div>
-              <div class="mt-1 text-gray-400">TypeScript, React, Node.js, Go</div>
-            </div>
-
-            <!-- Resume preview -->
-            <div class="w-1/2 bg-white p-5 overflow-hidden select-none">
-              <div class="text-center mb-2">
-                <div class="text-sm font-bold text-gray-900 tracking-widest uppercase">Jake Ryan</div>
-                <div class="text-[9px] text-gray-500 mt-1">jake@su.edu &nbsp;·&nbsp; github.com/jake</div>
-              </div>
-              <div class="border-b border-gray-300 mb-3" />
-              <div class="mb-3">
-                <div class="text-[9px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-1 mb-2">Education</div>
-                <div class="flex justify-between">
-                  <div class="text-[10px] font-bold text-gray-800">Southwestern University</div>
-                  <div class="text-[9px] text-gray-500">Georgetown, TX</div>
-                </div>
-                <div class="flex justify-between mt-0.5">
-                  <div class="text-[9px] italic text-gray-600">B.A. Computer Science</div>
-                  <div class="text-[9px] italic text-gray-500">2018 – 2021</div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <div class="text-[9px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-1 mb-2">Experience</div>
-                <div class="flex justify-between">
-                  <div class="text-[10px] font-bold text-gray-800">Software Engineer</div>
-                  <div class="text-[9px] text-gray-500">Jan 2022 – Present</div>
-                </div>
-                <div class="mt-1 space-y-0.5">
-                  <div class="text-[8.5px] text-gray-600 flex gap-1.5"><span>•</span><span>Built REST APIs used by 500+ users</span></div>
-                  <div class="text-[8.5px] text-gray-600 flex gap-1.5"><span>•</span><span>Reduced page load time by 40%</span></div>
-                  <div class="text-[8.5px] text-gray-600 flex gap-1.5"><span>•</span><span>Shipped 3 products end-to-end</span></div>
-                </div>
-              </div>
-              <div>
-                <div class="text-[9px] font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-1 mb-2">Skills</div>
-                <div class="text-[8.5px] text-gray-600">TypeScript, React, Node.js, Go</div>
-              </div>
-            </div>
-          </div>
+        <div class="relative rounded-sm overflow-hidden shadow-2xl ring-1 ring-gray-900/10">
+          <img :src="'/editor.png'" alt="Daddy's Resume editor" class="w-full h-auto block" />
         </div>
         <!-- Ambient glow -->
         <div class="absolute -inset-6 bg-gray-200/50 rounded-3xl -z-10 blur-3xl" />
@@ -173,27 +104,6 @@
       </section>
     </div>
 
-    <!-- ── Footer ── -->
-    <footer class="border-t border-gray-100 py-8 px-6">
-      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-        <span class="hstack gap-2 font-medium text-gray-500">
-          <img :src="'/logo.png'" alt="Daddy's Resume" class="h-6 w-auto" />
-          free and open source
-        </span>
-        <div class="flex items-center gap-6">
-          <a
-            href="https://github.com/amitVaibhavTiwari/Markdown-Resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-gray-700 transition-colors"
-          >GitHub</a>
-          <NuxtLink
-            :to="$nuxt.$localePath('/dashboard')"
-            class="hover:text-gray-700 transition-colors"
-          >Dashboard</NuxtLink>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 

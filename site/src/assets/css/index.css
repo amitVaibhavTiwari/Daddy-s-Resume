@@ -21,6 +21,13 @@ header {
   height: calc(100% - 48px);
 }
 
+/* Serif font for UI headings (landing, templates, dashboard) — not inside resume preview */
+:not(#resume-preview) h1,
+:not(#resume-preview) h2,
+:not(#resume-preview) h3 {
+  font-family: "Noto Serif JP", "Noto Serif JP Fallback", Georgia, serif;
+}
+
 /* For icons used in resumes */
 svg.iconify {
   display: inline-block;

@@ -29,6 +29,7 @@
         </span>
       </UiButton>
 
+      <!-- Language switcher — disabled for now
       <UiDropdownMenu>
         <UiDropdownMenuTrigger as-child>
           <UiButton
@@ -55,6 +56,7 @@
           </UiDropdownMenuItem>
         </UiDropdownMenuContent>
       </UiDropdownMenu>
+      -->
 
       <slot name="tail" />
 

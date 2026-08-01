@@ -41,6 +41,7 @@ jobs:
         run: pnpm --filter=site run build
         env:
           NUXT_PUBLIC_GOOGLE_FONTS_KEY: ${{ secrets.NUXT_PUBLIC_GOOGLE_FONTS_KEY }}
+          NUXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ secrets.NUXT_PUBLIC_GOOGLE_CLIENT_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

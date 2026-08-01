@@ -16,6 +16,7 @@ I was using Oh My CV for my resumes. One day I lost a resume to an accidental de
 - LaTeX math support ([KaTeX](https://github.com/KaTeX/KaTeX))
 - Custom CSS editor
 - Multiple resume variants (great for applying to different roles)
+- Multiple resume variants (great for applying to different roles)
 - Works offline (PWA)
 - All data stored locally in your browser, no tracking, no ads
 - Sync to your own Google Drive for backup. Import it back on any device

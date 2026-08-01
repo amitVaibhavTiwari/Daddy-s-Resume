@@ -89,7 +89,7 @@
             Browse Templates &rarr;
           </UiButton>
           <a
-            href="https://github.com/amitVaibhavTiwari/Markdown-Resume"
+            href="https://github.com/amitVaibhavTiwari/Daddy-s-Resume"
             target="_blank"
             rel="noopener noreferrer"
             class="h-11 px-6 text-base font-medium inline-flex items-center gap-2 text-gray-500 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"

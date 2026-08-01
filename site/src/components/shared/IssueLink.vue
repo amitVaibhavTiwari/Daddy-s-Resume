@@ -1,7 +1,7 @@
 <template>
   <a
     :class="cn('hover:underline', props.class)"
-    :href="`https://github.com/amitVaibhavTiwari/Markdown-Resume/issues/${issue}`"
+    :href="`https://github.com/amitVaibhavTiwari/Daddy-s-Resume/issues/${issue}`"
     target="_blank"
     rel="nofollow noopener"
     >#{{ issue }}</a

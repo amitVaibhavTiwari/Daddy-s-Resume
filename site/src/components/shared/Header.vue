@@ -66,7 +66,7 @@
         as="a"
         variant="ghost-secondary"
         size="round"
-        href="https://github.com/amitVaibhavTiwari/Markdown-Resume"
+        href="https://github.com/amitVaibhavTiwari/Daddy-s-Resume"
         target="_blank"
         rel="nofollow noopener"
       >

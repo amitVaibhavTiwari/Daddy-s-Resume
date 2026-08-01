@@ -1,10 +1,21 @@
 <template>
-  <header class="hstack justify-between pl-4 pr-1">
+  <header class="hstack justify-between px-8 py-3 pt-7 bg-transparent">
     <nuxt-link class="hstack gap-x-2" :to="$nuxt.$localePath('/')">
-      <div text-lg><SharedBrandName /></div>
+      <img :src="'/logo.png'" alt="Daddy's Resume" class="h-16 w-auto" />
     </nuxt-link>
 
     <div class="hstack">
+      <UiButton
+        :as="NuxtLink"
+        :to="$nuxt.$localePath('/templates')"
+        variant="ghost-secondary"
+        size="xs"
+        class="h-8 gap-x-1"
+        aria-label="Templates"
+      >
+        <span class="hide-on-mobile text-base">Templates</span>
+      </UiButton>
+
       <UiButton
         :as="NuxtLink"
         :to="$nuxt.$localePath('/dashboard')"
@@ -13,12 +24,12 @@
         class="h-8 gap-x-1"
         :aria-label="$t('dashboard.my_resumes')"
       >
-        <span class="i-ep:menu text-lg" />
         <span class="hide-on-mobile text-base">
           {{ $t("dashboard.my_resumes") }}
         </span>
       </UiButton>
 
+      <!-- Language switcher — disabled for now
       <UiDropdownMenu>
         <UiDropdownMenuTrigger as-child>
           <UiButton
@@ -45,16 +56,17 @@
           </UiDropdownMenuItem>
         </UiDropdownMenuContent>
       </UiDropdownMenu>
+      -->
 
       <slot name="tail" />
 
-      <SharedToggleDark />
+      <!-- <SharedToggleDark /> -->
 
       <UiButton
         as="a"
         variant="ghost-secondary"
         size="round"
-        href="https://github.com/amitVaibhavTiwari/Markdown-Resume"
+        href="https://github.com/amitVaibhavTiwari/Daddy-s-Resume"
         target="_blank"
         rel="nofollow noopener"
       >

@@ -161,6 +161,53 @@ export class StorageService {
     downloadFile("ohmycv_data.json", JSON.stringify(json));
   }
 
+  public async getSyncData(): Promise<StorageJson> {
+    const data = (await this.getResumes()).reduce((acc, { id, ...resume }) => {
+      acc[id] = resume;
+      return acc;
+    }, {} as StorageJsonData);
+
+    return { version: this._version, data };
+  }
+
+  public async markAllAsDriveSynced() {
+    const resumes = await this.getResumes();
+    for (const resume of resumes) {
+      await this._db.update({ id: resume.id, drive_synced: true }, false);
+    }
+  }
+
+  public async importFromDrive(content: string): Promise<boolean> {
+    const json = (() => {
+      try {
+        return JSON.parse(content);
+      } catch {
+        return null;
+      }
+    })();
+
+    const res = IsValid.importedJson(json);
+    if (!res) return false;
+
+    const migrateService = new MigrateService(res.version);
+    const { data } = await migrateService.migrate(res.data);
+
+    for (const [_id, resume] of Object.entries(data)) {
+      const id = Number(_id);
+      const { data: existing, error } = await this._db.queryById(id);
+
+      if (error) return false;
+
+      if (existing) {
+        await this._db.update({ id, ...resume, drive_synced: true }, false);
+      } else {
+        await this._db.create({ id, ...resume, drive_synced: true });
+      }
+    }
+
+    return true;
+  }
+
   /**
    * Check the validity of and import JSON data
    *

@@ -1,26 +1,28 @@
 <template>
   <div id="editor-page" class="flex flex-col">
-    <SharedHeader>
-      <template #tail>
-        <UiButton
-          variant="ghost-secondary"
-          size="round"
-          @click="isToolbarOpen = !isToolbarOpen"
-          :aria-label="isToolbarOpen ? $t('close_toolbar') : $t('open_toolbar')"
-        >
-          <span
-            :class="[
-              'size-4.5',
-              isToolbarOpen
-                ? 'i-tabler:layout-sidebar-right-collapse'
-                : 'i-tabler:layout-sidebar-right-expand'
-            ]"
-          />
-        </UiButton>
-      </template>
-    </SharedHeader>
+    <div class="sticky top-0 z-40">
+      <SharedHeader>
+        <template #tail>
+          <UiButton
+            variant="ghost-secondary"
+            size="round"
+            @click="isToolbarOpen = !isToolbarOpen"
+            :aria-label="isToolbarOpen ? $t('close_toolbar') : $t('open_toolbar')"
+          >
+            <span
+              :class="[
+                'size-4.5',
+                isToolbarOpen
+                  ? 'i-tabler:layout-sidebar-right-collapse'
+                  : 'i-tabler:layout-sidebar-right-expand'
+              ]"
+            />
+          </UiButton>
+        </template>
+      </SharedHeader>
+    </div>
 
-    <div class="workspace flex pb-2">
+    <div class="workspace flex pb-2 mt-6">
       <SplitterGroup id="splitter-editor" direction="horizontal" class="px-3">
         <SplitterPanel id="code-pane">
           <EditorCode v-if="data.loaded" />

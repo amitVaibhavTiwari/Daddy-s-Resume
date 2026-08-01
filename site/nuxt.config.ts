@@ -32,20 +32,22 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      googleFontsKey: ""
+      googleFontsKey: "",
+      googleClientId: ""
     }
   },
 
   colorMode: {
-    classSuffix: ""
+    classSuffix: "",
+    preference: "light"
   },
 
   app: {
     head: {
       viewport: "width=device-width,initial-scale=1",
       link: [
-        { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-        { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#222" },
+        { rel: "icon", type: "image/png", href: "/logo.png" },
+        { rel: "apple-touch-icon", href: "/logo.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
         {
@@ -55,15 +57,26 @@ export default defineNuxtConfig({
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap"
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap"
         }
       ],
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "application-name", content: "Markdown Resume" },
-        { name: "apple-mobile-web-app-title", content: "Markdown Resume" },
+        { name: "application-name", content: "Daddy's Resume" },
+        { name: "apple-mobile-web-app-title", content: "Daddy's Resume" },
         { name: "msapplication-TileColor", content: "#fff" },
         { property: "og:url", content: "https://markdownresume.amitvaibhavtiwari.dev" },
-        { property: "og:type", content: "website" }
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: "https://markdownresume.amitvaibhavtiwari.dev/editor.png" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:alt", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: "https://markdownresume.amitvaibhavtiwari.dev/editor.png" },
+        { name: "twitter:title", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
+        { name: "twitter:description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed." }
       ]
     }
   },

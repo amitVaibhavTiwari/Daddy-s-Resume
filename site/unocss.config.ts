@@ -67,7 +67,7 @@ export default defineConfig({
     presetShadcn(
       {
         color: {
-          base: "orange",
+          base: "zinc",
           light: {
             background: "0 0% 100%",
             foreground: "215 25% 27%",
@@ -75,6 +75,8 @@ export default defineConfig({
             "card-foreground": "215 25% 27%",
             popover: "0 0% 100%",
             "popover-foreground": "215 25% 27%",
+            primary: "0 0% 9%",
+            "primary-foreground": "0 0% 98%",
             secondary: "220 13% 91%",
             "secondary-foreground": "220.9 39.3% 11%", // gray
             muted: "220 14.3% 95.9%", // gray
@@ -82,7 +84,8 @@ export default defineConfig({
             accent: "220 14.3% 95.9%", // gray
             "accent-foreground": "220.9 39.3% 11%", // gray
             border: "216 12% 85%",
-            input: "216 12% 85%"
+            input: "216 12% 85%",
+            ring: "0 0% 9%"
           },
           dark: {
             background: "213 12% 15%",
@@ -91,6 +94,8 @@ export default defineConfig({
             "card-foreground": "0 0% 90%",
             popover: "213 12% 15%",
             "popover-foreground": "0 0% 90%",
+            primary: "0 0% 98%",
+            "primary-foreground": "0 0% 9%",
             secondary: "230 5% 36%",
             "secondary-foreground": "0 0% 98%", // neutral
             muted: "220 10% 21%",
@@ -98,7 +103,8 @@ export default defineConfig({
             accent: "220 10% 21%",
             "accent-foreground": "0 0% 98%", // neutral
             border: "0 0% 45%",
-            input: "0 0% 45%"
+            input: "0 0% 45%",
+            ring: "0 0% 98%"
           }
         }
       },

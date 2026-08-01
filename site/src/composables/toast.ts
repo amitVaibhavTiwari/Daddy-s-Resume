@@ -59,6 +59,22 @@ export const useToast = () => {
     }
   };
 
+  const driveSync = (success: boolean) => {
+    if (success) {
+      toast.success("Synced to Google Drive");
+    } else {
+      toast.error("Failed to sync to Google Drive");
+    }
+  };
+
+  const driveImport = (success: boolean) => {
+    if (success) {
+      toast.success("Imported from Google Drive");
+    } else {
+      toast.error("No backup found on Google Drive");
+    }
+  };
+
   return {
     save,
     switch: onSwitch,
@@ -66,6 +82,8 @@ export const useToast = () => {
     new: onNew,
     duplicate,
     correct,
-    import: onImport
+    import: onImport,
+    driveSync,
+    driveImport
   };
 };

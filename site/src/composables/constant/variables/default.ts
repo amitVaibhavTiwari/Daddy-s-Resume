@@ -193,6 +193,7 @@ header:
 - Communicate with managers to set up campus computers used on campus
 - Assess and troubleshoot computer problems brought by students, faculty and staff
 - Maintain upkeep of computers, classroom equipment, and 200 printers across campus
+- Resolved 30+ support tickets weekly, maintaining a 97% user satisfaction rating
 
 **Artificial Intelligence Research Assistant**
   ~ May 2019 -- July 2019
@@ -206,6 +207,7 @@ header:
 - Conducted a human subject study to determine which video game dungeon generation technique is enjoyable
 - Wrote an 8-page paper and gave multiple presentations on-campus
 - Presented virtually to the World Conference on Computational Intelligence
+- Collaborated with a team of 4 researchers to design and evaluate novel procedural generation algorithms
 
 
 ## Projects

@@ -5,9 +5,9 @@ open_toolbar: Open toolbar
 close_toolbar: Close toolbar
 
 head:
-  title: Markdown Resume - Free Online Resume Maker
-  desc: Free online resume maker. Write your resume in Markdown and export to PDF in seconds.
-  keywords: resume maker, cv maker, curriculum vitae maker, markdown resume
+  title: "Daddy's Resume - Free Markdown Resume Builder | No Signup, ATS-Friendly"
+  desc: "Build your resume for free using Markdown. Real-time PDF preview, ATS-friendly templates, no account needed. Your data stays in your browser. Export to PDF in one click."
+  keywords: "markdown resume builder, free resume builder, free resume builder online, ATS resume builder, resume builder no signup, resume builder no login, free resume maker, resume builder no account, pdf resume builder, markdown resume, free cv builder, resume builder browser, open source resume builder"
 
 landing:
   hero: Write your <span text-primary>resumes</span> in Markdown!
@@ -15,7 +15,7 @@ landing:
   start: Create My Resume
   feats:
     - title: Simple and Powerful
-      items: Manage multiple resumes<br>Real-time preview<br>Export to PDF<br>Fully customizable<br>Choose fonts and add icons<br>And <a href="https://github.com/amitVaibhavTiwari/Markdown-Resume#features" target="_blank">more features</a>
+      items: Manage multiple resumes<br>Real-time preview<br>Export to PDF<br>Fully customizable<br>Choose fonts and add icons<br>And <a href="https://github.com/amitVaibhavTiwari/Daddy-s-Resume#features" target="_blank">more features</a>
     - title: Privacy First
       items: Open source and free<br>All data is saved locally<br>No login or registration needed<br>No user tracking<br>No ads
 

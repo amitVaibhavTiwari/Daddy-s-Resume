@@ -131,7 +131,9 @@ export class LocalForageDbService implements DbService {
     const { id, ...updatedResume } = {
       ...storage[data.id],
       ...data,
-      updated_at: newUpdateTime ? now().toString() : storage[data.id].updated_at
+      updated_at: newUpdateTime ? now().toString() : storage[data.id].updated_at,
+      // if drive_synced is explicitly passed (e.g. after a Drive sync), use it; otherwise mark as unsynced
+      drive_synced: data.drive_synced !== undefined ? data.drive_synced : false
     };
 
     storage[id] = updatedResume;
@@ -160,10 +162,11 @@ export class LocalForageDbService implements DbService {
 
     // Generate a new "id", "updated_at" and "created_at" if not provided
     const createdData: DbResume = {
+      drive_synced: false,
       updated_at: _now.toString(),
       created_at: _now.toString(),
       id: _now,
-      ...data
+      ...data  // data.drive_synced (if provided) overrides the default false above
     };
 
     const { id, ...resume } = createdData;

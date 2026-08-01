@@ -114,7 +114,7 @@ useHead({
     { name: "description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed. Your data stays in your browser. Export to PDF in one click." },
     { property: "og:title", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
     { property: "og:description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed." },
-    { property: "og:url", content: "https://markdownresume.amitvaibhavtiwari.dev" }
+    { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev" }
   ],
   script: [
     {
@@ -123,7 +123,7 @@ useHead({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Daddy's Resume",
-        "url": "https://markdownresume.amitvaibhavtiwari.dev",
+        "url": "https://daddysresume.amitvaibhavtiwari.dev",
         "description": "Free Markdown resume builder with real-time PDF preview. No signup, no login, no data sent to servers. ATS-friendly templates included.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
@@ -138,7 +138,7 @@ useHead({
           "Export to PDF",
           "Open source"
         ],
-        "screenshot": "https://markdownresume.amitvaibhavtiwari.dev/editor.png"
+        "screenshot": "https://daddysresume.amitvaibhavtiwari.dev/editor.png"
       })
     }
   ]

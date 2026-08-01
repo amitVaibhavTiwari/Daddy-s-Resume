@@ -37,7 +37,7 @@ useHead({
     },
     {
       rel: "canonical",
-      href: "https://markdownresume.amitvaibhavtiwari.dev"
+      href: "https://daddysresume.amitvaibhavtiwari.dev"
     }
   ],
   script: [

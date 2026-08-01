@@ -68,13 +68,13 @@ export default defineNuxtConfig({
         { name: "application-name", content: "Daddy's Resume" },
         { name: "apple-mobile-web-app-title", content: "Daddy's Resume" },
         { name: "msapplication-TileColor", content: "#fff" },
-        { property: "og:url", content: "https://markdownresume.amitvaibhavtiwari.dev" },
+        { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev" },
         { property: "og:type", content: "website" },
-        { property: "og:image", content: "https://markdownresume.amitvaibhavtiwari.dev/editor.png" },
+        { property: "og:image", content: "https://daddysresume.amitvaibhavtiwari.dev/editor.png" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:alt", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:image", content: "https://markdownresume.amitvaibhavtiwari.dev/editor.png" },
+        { name: "twitter:image", content: "https://daddysresume.amitvaibhavtiwari.dev/editor.png" },
         { name: "twitter:title", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
         { name: "twitter:description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed." }
       ]
@@ -82,7 +82,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://markdownresume.amitvaibhavtiwari.dev"
+    url: "https://daddysresume.amitvaibhavtiwari.dev"
   },
 
   pwa,

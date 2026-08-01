@@ -4,4 +4,4 @@ Allow: /templates
 Disallow: /dashboard
 Disallow: /editor/
 
-Sitemap: https://markdownresume.amitvaibhavtiwari.dev/sitemap.xml
+Sitemap: https://daddysresume.amitvaibhavtiwari.dev/sitemap.xml

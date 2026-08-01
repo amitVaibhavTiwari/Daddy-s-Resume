@@ -72,7 +72,7 @@ useHead({
     { name: "description", content: "Browse free ATS-friendly resume templates. Pick a template, fill it with your details in Markdown, and export to PDF. No signup required." },
     { property: "og:title", content: "Free Resume Templates | Daddy's Resume" },
     { property: "og:description", content: "Browse free ATS-friendly resume templates. No signup required." },
-    { property: "og:url", content: "https://markdownresume.amitvaibhavtiwari.dev/templates" }
+    { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev/templates" }
   ]
 });
 

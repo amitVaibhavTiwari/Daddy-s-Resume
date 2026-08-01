@@ -14,17 +14,17 @@ I was using Oh My CV for my resumes. One day I lost a resume to an accidental de
 - Pick any font from [Google Fonts](https://fonts.google.com/)
 - Add icons via [Iconify](https://github.com/iconify/iconify)
 - LaTeX math support ([KaTeX](https://github.com/KaTeX/KaTeX))
-- Cross-references (great for academic CVs)
 - Custom CSS editor
-- Multiple resumes
+- Multiple resume variants (great for applying to different roles)
 - Works offline (PWA)
-- All data stored locally in your browser — no tracking, no ads
+- All data stored locally in your browser, no tracking, no ads
+- Sync to your own Google Drive for backup. Import it back on any device
+- **Jake's Resume template** - clean, minimal, one-page layout built for software engineers
 
 
 ## Important
 
 - Use a Chromium-based browser (Chrome, Edge) for best results
-- **Back up your data** — click `Save As` regularly, cloud backup isn't available yet
 
 
 ## Contribution

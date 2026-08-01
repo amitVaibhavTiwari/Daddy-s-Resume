@@ -101,6 +101,7 @@
       </div>
     </section>
 
+    <SharedFooter />
   </div>
 </template>
 

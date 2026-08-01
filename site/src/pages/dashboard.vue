@@ -40,6 +40,7 @@
         </template>
       </div>
     </div>
+    <SharedFooter />
   </div>
 </template>
 

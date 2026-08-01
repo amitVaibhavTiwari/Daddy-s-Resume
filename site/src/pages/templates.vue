@@ -61,6 +61,7 @@
 
       <p class="mt-10 text-xs text-gray-400">More templates coming soon.</p>
     </div>
+    <SharedFooter />
   </div>
 </template>
 

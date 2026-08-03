@@ -33,7 +33,7 @@ useHead({
     {
       rel: "icon",
       type: "image/png",
-      href: "/logo.png"
+      href: "/daddys-resume-logo.png"
     },
     {
       rel: "canonical",

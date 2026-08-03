@@ -9,23 +9,23 @@ export const pwa: ModuleOptions = {
   manifest: {
     id: scope,
     scope,
-    name: "Markdown Resume",
-    short_name: "MD Resume",
+    name: "Daddy's Resume",
+    short_name: "Daddy's Resume",
     icons: [
       {
-        src: "/pwa-192x192.png",
+        src: "/daddys-resume-logo.png",
         sizes: "192x192",
         type: "image/png"
       },
       {
-        src: "/pwa-512x512.png",
+        src: "/daddys-resume-logo.png",
         sizes: "512x512",
         type: "image/png"
       },
       {
-        src: "/favicon.svg",
+        src: "/daddys-resume-logo.png",
         sizes: "512x512",
-        type: "image/svg",
+        type: "image/png",
         purpose: "any maskable"
       }
     ]

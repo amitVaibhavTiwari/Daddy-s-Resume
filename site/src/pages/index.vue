@@ -121,6 +121,15 @@ useHead({
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Daddy's Resume - Free & Open Source Markdown Resume Builder",
+        "url": "https://daddysresume.amitvaibhavtiwari.dev"
+      })
+    },
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Daddy's Resume",
         "url": "https://daddysresume.amitvaibhavtiwari.dev",

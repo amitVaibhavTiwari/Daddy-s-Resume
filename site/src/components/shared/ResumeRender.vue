@@ -22,7 +22,7 @@ const size = computed(() => ({
 }));
 const margins = computed(() => ({
   top: props.styles.marginV,
-  bottom: Math.max(props.styles.marginV - 10, constant.RENDER.PRINT_BOTTOM),
+  bottom: props.styles.marginV * 2,
   left: props.styles.marginH,
   right: props.styles.marginH
 }));

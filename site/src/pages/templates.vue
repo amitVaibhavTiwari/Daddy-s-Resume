@@ -59,7 +59,6 @@
         </div>
       </div>
 
-      <p class="mt-10 text-xs text-gray-400">More templates coming soon.</p>
     </div>
     <SharedFooter />
   </div>
@@ -67,11 +66,13 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Free Resume Templates - ATS-Friendly Markdown Templates | Daddy's Resume",
+  title: "Free ATS-Friendly Markdown Resume Templates | Daddy's Resume",
   meta: [
-    { name: "description", content: "Browse free ATS-friendly resume templates. Pick a template, fill it with your details in Markdown, and export to PDF. No signup required." },
-    { property: "og:title", content: "Free Resume Templates | Daddy's Resume" },
-    { property: "og:description", content: "Browse free ATS-friendly resume templates. No signup required." },
+    { name: "description", content: "Browse free ATS-friendly Markdown resume templates. Pick a template, write your resume in Markdown, preview as PDF in real time, and export with one click. No signup required." },
+    { name: "keywords", content: "markdown resume templates, ATS friendly resume templates, free resume templates, markdown resume, software engineer resume template" },
+    { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+    { property: "og:title", content: "Free ATS-Friendly Markdown Resume Templates | Daddy's Resume" },
+    { property: "og:description", content: "Browse free ATS-friendly Markdown resume templates. Write in Markdown, preview as PDF, export with one click. No signup required." },
     { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev/templates" }
   ]
 });

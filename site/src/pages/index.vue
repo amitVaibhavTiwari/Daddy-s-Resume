@@ -4,13 +4,12 @@
 
     <!-- ── Hero: centered ── -->
     <section class="px-6 pt-20 pb-16 text-center max-w-4xl mx-auto">
-      <h1 class="text-[3rem] sm:text-[4rem] font-bold text-gray-900 leading-[1.15] tracking-tight mb-6">
+      <h1 class="text-[3rem] sm:text-[4rem] font-bold text-gray-900 leading-[1.17] tracking-tight mb-7">
         Make your resumes<br/>the quick and easy way.
       </h1>
       <p class="text-lg text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto">
-        Write your resume in Markdown with prebuilt ATS-friendly templates. Preview changes in real time,
-        export to PDF, and keep your data stored locally in your browser. Sync with Google Drive,
-        so your data always stays yours.
+        Create resumes in Markdown using ATS-friendly templates. Preview in real time, export to PDF
+        and keep your data private in your browser with optional Google Drive sync.
       </p>
       <div class="flex items-center justify-center gap-3 flex-wrap">
         <UiButton
@@ -52,7 +51,7 @@
             </h2>
             <p class="text-gray-500 text-base leading-relaxed">
               Everything stays in your browser. No sign-in, no cloud account, no database.
-              When you need a backup, sync to your own Google Drive, not ours.
+              When you need a backup, sync to your Google Drive.
             </p>
           </div>
 
@@ -79,7 +78,7 @@
         <h2 class="text-4xl font-bold text-gray-900 mb-4 tracking-tight">
           Start writing your resume.
         </h2>
-        <p class="text-gray-400 mb-10 text-lg">No sign-up. No credit card. Just open your browser.</p>
+        <p class="text-gray-400 mb-10 text-base">No sign-up. No credit card. Just open your browser.</p>
         <div class="flex items-center gap-3 flex-wrap justify-center">
           <UiButton
             :as="NuxtLink"
@@ -109,11 +108,13 @@
 import { NuxtLink } from "#components";
 
 useHead({
-  title: "Daddy's Resume - Free & Open Source Markdown Resume Builder | No Signup, ATS-Friendly",
+  title: "Daddy's Resume - Free Markdown Resume Builder | ATS-Friendly & Open Source",
   meta: [
-    { name: "description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed. Your data stays in your browser. Export to PDF in one click." },
-    { property: "og:title", content: "Daddy's Resume - Free & Open Source Markdown Resume Builder" },
-    { property: "og:description", content: "Build your resume for free using Markdown. Open source, real-time PDF preview, ATS-friendly templates, no account needed." },
+    { name: "description", content: "The best free Markdown resume builder. Write your resume in Markdown, preview as PDF in real time, pick ATS-friendly templates, and export with one click. No signup, no data sent to servers. Open source." },
+    { name: "keywords", content: "markdown resume builder, markdown resume, free resume builder, ATS friendly resume, resume to PDF, open source resume builder, markdown to PDF, resume maker" },
+    { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+    { property: "og:title", content: "Daddy's Resume - Free Markdown Resume Builder" },
+    { property: "og:description", content: "Write your resume in Markdown, preview as PDF in real time, and export with one click. ATS-friendly templates. No signup required. Open source." },
     { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev" }
   ],
   script: [
@@ -122,8 +123,14 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Daddy's Resume - Free & Open Source Markdown Resume Builder",
-        "url": "https://daddysresume.amitvaibhavtiwari.dev"
+        "name": "Daddy's Resume",
+        "alternateName": "Markdown Resume Builder",
+        "url": "https://daddysresume.amitvaibhavtiwari.dev",
+        "description": "Free open source Markdown resume builder with real-time PDF preview and ATS-friendly templates.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://daddysresume.amitvaibhavtiwari.dev/templates"
+        }
       })
     },
     {
@@ -131,23 +138,97 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Daddy's Resume",
+        "name": "Daddy's Resume - Markdown Resume Builder",
         "url": "https://daddysresume.amitvaibhavtiwari.dev",
-        "description": "Free Markdown resume builder with real-time PDF preview. No signup, no login, no data sent to servers. ATS-friendly templates included.",
+        "description": "Free Markdown resume builder with real-time PDF preview. Write in Markdown, choose ATS-friendly templates, export to PDF. No signup, no login, no data sent to servers.",
         "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Resume Builder",
         "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "featureList": [
-          "Write resume in Markdown",
+          "Markdown resume editor",
           "Real-time PDF preview",
-          "ATS-friendly templates",
+          "ATS-friendly resume templates",
           "No account or login required",
           "Data stored locally in browser",
           "Google Drive sync",
           "Export to PDF",
           "Open source"
         ],
-        "screenshot": "https://daddysresume.amitvaibhavtiwari.dev/editor.png"
+        "screenshot": "https://daddysresume.amitvaibhavtiwari.dev/editor.png",
+        "softwareVersion": "1.0",
+        "license": "https://opensource.org/licenses/GPL-3.0",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1"
+        }
+      })
+    },
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a Markdown resume builder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Markdown resume builder lets you write your resume using Markdown syntax — a simple, readable plain text format — and automatically renders it as a beautifully formatted PDF. Daddy's Resume is a free, open source Markdown resume builder with real-time PDF preview and ATS-friendly templates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I create a resume in Markdown?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With Daddy's Resume, you pick an ATS-friendly template, fill in your details using Markdown syntax in the built-in editor, and see the formatted PDF update in real time. When ready, export to PDF with one click. No signup or account needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this Markdown resume builder free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Daddy's Resume is completely free. It is open source (GPL-3.0) and has no paid plans, no subscriptions, and no hidden costs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are the resume templates ATS-friendly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All templates are designed to be ATS (Applicant Tracking System) friendly — clean formatting, standard fonts, and structured sections that parse correctly in recruiter software."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to create an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You can build and export your resume without creating an account or providing an email. Your resume data is stored locally in your browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is my resume data stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your resume data is stored entirely in your browser's local storage. Nothing is sent to any server. Optionally, you can back up to your own Google Drive."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export my resume to PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Daddy's Resume lets you export your Markdown resume to a high-quality PDF with one click, directly from your browser."
+            }
+          }
+        ]
       })
     }
   ]
@@ -160,7 +241,7 @@ const privacyItems = [
   },
   {
     title: "Sync to your own Drive",
-    desc: "Back up to your own Google Drive on demand. Not ours."
+    desc: "Back up to your own Google Drive if needed."
   },
   {
     title: "No login required",

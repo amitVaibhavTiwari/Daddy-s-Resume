@@ -66,9 +66,24 @@ export const useGoogleDrive = () => {
     return signIn();
   };
 
+  const _fetchWithRetry = async (input: string, init: RequestInit): Promise<Response> => {
+    const res = await fetch(input, init);
+    if (res.status === 401) {
+      // Token expired — clear it and re-authenticate
+      accessToken.value = null;
+      const ok = await signIn();
+      if (!ok) return res;
+      return fetch(input, {
+        ...init,
+        headers: { ...(init.headers as Record<string, string>), ..._headers() }
+      });
+    }
+    return res;
+  };
+
   const _findFileId = async (): Promise<string | null> => {
     const q = encodeURIComponent(`name='${DRIVE_FILE_NAME}' and trashed=false`);
-    const res = await fetch(
+    const res = await _fetchWithRetry(
       `https://www.googleapis.com/drive/v3/files?q=${q}&fields=files(id)&spaces=drive`,
       { headers: _headers() }
     );
@@ -101,7 +116,7 @@ export const useGoogleDrive = () => {
       ? `https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=multipart`
       : "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart";
 
-    const res = await fetch(url, {
+    const res = await _fetchWithRetry(url, {
       method: fileId ? "PATCH" : "POST",
       headers: {
         ..._headers(),
@@ -119,7 +134,7 @@ export const useGoogleDrive = () => {
     const fileId = await _findFileId();
     if (!fileId) return null;
 
-    const res = await fetch(
+    const res = await _fetchWithRetry(
       `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
       { headers: _headers() }
     );

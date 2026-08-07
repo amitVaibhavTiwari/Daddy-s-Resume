@@ -10,11 +10,11 @@
       </div>
 
       <!-- Cards -->
-      <div class="flex flex-wrap gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="t in templates"
           :key="t.id"
-          class="w-[460px] bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200"
+          class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-200"
         >
           <!-- Screenshot area — matches resume card preview height -->
           <div class="bg-gray-50 border-b border-gray-100 flex items-center justify-center relative overflow-hidden" style="height: 651px">
@@ -36,7 +36,7 @@
             <div class="text-[11px] text-gray-400 mb-2">
               Inspired by <a :href="t.inspiredUrl" target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-600 transition-colors">{{ t.inspired }}</a>
             </div>
-            <p class="text-[11px] text-gray-500 leading-relaxed mb-3">{{ t.desc }}</p>
+            <p class="text-[11px] text-gray-500 leading-relaxed mb-3 line-clamp-2">{{ t.desc }}</p>
 
             <div class="flex gap-2">
               <UiButton class="flex-1 h-8 text-xs" :disabled="creating === t.id" @click="useTemplate(t.id)">
@@ -88,7 +88,7 @@ const templates = [
     name: "Template 1",
     inspired: "billryan resume",
     inspiredUrl: "https://github.com/billryan/resume",
-    desc: "Classic academic style. Great for researchers and detailed formatting. Supports CJK characters.",
+    desc: "Classic academic style with rich formatting support and CJK characters. Originally built by Renovamen for OhMyCv.",
     screenshot: "/template-1.webp",
     sample: "/template1.pdf"
   },
@@ -100,6 +100,15 @@ const templates = [
     desc: "Clean, minimal layout popular among software engineers. Tight spacing and structured entries give it a sharp, professional look. Great for keeping everything on one page.",
     screenshot: "/template-2.webp",
     sample: "/template2.pdf"
+  },
+  {
+    id: "muratcan",
+    name: "Template 3",
+    inspired: "AlexW00/CV by Alexander Weichart",
+    inspiredUrl: "https://github.com/AlexW00/CV",
+    desc: "Mid-senior engineer style layout with colored section headings, trailing divider rules, and bold-label skill rows. Specially designed for clean and structured look in one page.",
+    screenshot: "/template-3.webp",
+    sample: "/template-3.pdf"
   }
 ];
 

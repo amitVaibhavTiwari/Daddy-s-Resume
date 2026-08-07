@@ -64,6 +64,14 @@ export const useConstant = () => {
       styles: V.JAKE_STYLES,
       markdown: V.JAKE_MD_CONTENT,
       css: V.JAKE_CSS_CONTENT
+    },
+    {
+      id: "muratcan" as const,
+      name: "Muratcan CV",
+      description: "Colored section headings with trailing rules, great for academic and engineering profiles",
+      styles: V.MURATCAN_STYLES,
+      markdown: V.MURATCAN_MD_CONTENT,
+      css: V.MURATCAN_CSS_CONTENT
     }
   ];
 

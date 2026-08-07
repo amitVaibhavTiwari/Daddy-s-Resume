@@ -435,6 +435,333 @@ ${PREVIEW_SELECTOR} :not(.resume-header-item) > a {
 }
 `;
 
+/* ─────────────────────────────────────────────
+   Template 3
+───────────────────────────────────────────── */
+
+export const MURATCAN_STYLES = {
+  marginV: 28,
+  marginH: 36,
+  lineHeight: 1.25,
+  paragraphSpace: 9,
+  themeColor: "#1a3c72",
+  fontCJK: {
+    name: "华康宋体",
+    fontFamily: "HKST"
+  },
+  fontEN: {
+    name: "Lato"
+  },
+  fontSize: 13,
+  paper: "A4"
+} as ResumeStyles;
+
+export const MURATCAN_MD_CONTENT = `---
+name: Jesse Pinkman
+header:
+  - text: Full-Stack Software Engineer | AI/Automation Engineer
+  - text: jesse@email.com
+    link: mailto:jesse@email.com
+    newLine: true
+  - text: <span class="iconify" data-icon="tabler:brand-linkedin"></span> LinkedIn
+    link: https://linkedin.com/in/jessepinkman
+  - text: <span class="iconify" data-icon="tabler:brand-github"></span> GitHub
+    link: https://github.com/jessepinkman
+  - text: <span class="iconify" data-icon="simple-icons:leetcode"></span> LeetCode
+    link: https://leetcode.com/jessepinkman
+  - text: <span class="iconify" data-icon="simple-icons:codeforces"></span> Codeforces
+    link: https://codeforces.com/profile/jessepinkman
+  - text: jessepinkman.dev
+    link: https://jessepinkman.dev
+---
+
+<!-- Replace all content below with your own information. -->
+
+
+## Skills
+
+**Languages:** JavaScript | TypeScript | Python | Java | SQL
+
+**Frameworks:** React | Node.js | Spring Boot | FastAPI | Next.js | LangChain | LangGraph
+
+**AI & Agents:** RAG Pipelines | Vector DBs (Pinecone, Weaviate) | CrewAI | Prompt Engineering
+
+**Tools & Infra:** Docker | Kubernetes | AWS | PostgreSQL | Redis | Git | CI/CD | n8n
+
+**Soft Skills:** System Design | Code Review | Mentorship | Cross-team Collaboration
+
+
+## Experience
+
+**Acme Corp**
+  ~ Jan 2023 - Present
+
+*Senior Software Engineer — TypeScript, React, Node.js, LLMs*
+  ~ San Francisco, CA (Remote)
+
+- Led development of a customer-facing dashboard used by 50k+ users, reducing page load time by 40% through lazy loading and server-side rendering optimizations.
+- Built an internal AI assistant using LangChain and GPT-4o that automated support ticket triage and routing, cutting average resolution time by 65% and saving 120+ engineering hours per month.
+- Designed an agentic AI pipeline for automated code review using LLM-based analysis and tool-calling agents, catching 30% more bugs before reaching production.
+- Architected a microservices-based notification system handling 2M+ events per day using Node.js, Kafka, and Redis.
+- Mentored 4 engineers through code reviews and pair programming; led team adoption of TypeScript strict mode across 3 core services.
+
+**Beta Technologies**
+  ~ Jun 2021 - Dec 2022
+
+*Software Engineer — Java, Spring Boot, PostgreSQL, Python*
+  ~ New York, NY
+
+- Built RESTful APIs for a B2B SaaS platform serving 200+ enterprise clients, owning the full lifecycle from design to production deployment.
+- Integrated an AI-powered fraud detection microservice (scikit-learn + FastAPI) into the payment flow, reducing fraudulent transactions by 42% in Q1 2022.
+- Reduced database query times by 60% through query optimization, materialized views, and strategic indexing on high-traffic tables.
+- Automated CI/CD deployment pipelines using GitHub Actions and Docker, cutting release cycle time from 2 weeks to 2 days.
+- Built a Python automation layer for internal reporting that eliminated 15+ hours of manual weekly work.
+
+**Startup XYZ**
+  ~ Aug 2020 - May 2021
+
+*Junior Software Engineer — Python, FastAPI, React*
+  ~ Remote
+
+- Developed core product features from scratch, including user authentication, billing integration, and an admin dashboard.
+- Integrated Stripe payment processing and webhook handling for subscription management.
+- Built an AI chatbot using the OpenAI API to automate new-user onboarding, improving activation rate by 28% and reducing support tickets by 40%.
+- Contributed to infrastructure-as-code migration from manual deploys to Terraform + AWS ECS, cutting environment setup time from hours to minutes.
+
+
+## Projects
+
+**TaskFlow** | [GitHub](https://github.com/jessepinkman/taskflow) | [Live](https://taskflow.jessepinkman.dev)
+
+- Full-stack project management tool built with Next.js, PostgreSQL, and Prisma; supports real-time collaboration via WebSockets, role-based access control, and an AI assistant that suggests task priorities using GPT-4o.
+
+**AutoAgent** | [GitHub](https://github.com/jessepinkman/autoagent) | [Live](#)
+
+- Multi-agent orchestration framework built with LangGraph and Python; enables autonomous task decomposition using role-based AI agents with tool-calling, persistent memory, and human-in-the-loop approval flows.
+
+**OpenMetrics** | [GitHub](https://github.com/jessepinkman/openmetrics) | [Live](#)
+
+- Lightweight self-hosted analytics dashboard with AI anomaly detection built with React and ClickHouse; automatically surfaces performance regressions and processes 500k+ events per day with sub-second query times.
+
+
+## Education
+
+**Bachelor of Science — Computer Science**
+  ~ Aug 2016 - May 2020
+
+*State University*
+  ~ Austin, TX
+
+- Relevant coursework: Data Structures, Algorithms, Operating Systems, Distributed Systems, Database Systems.
+
+
+## Achievements
+
+Solved 700+ problems on LeetCode (Knight, top 3.5%); rated 1900+ on Codeforces (Expert)
+  ~ [LeetCode ↗](https://leetcode.com/jessepinkman)
+
+Won 1st place at HackState 2023, building an AI-powered transit optimizer for a city with 500k daily commuters
+  ~ [Devpost ↗](https://devpost.com/software/hackstate-transit)
+
+Speaker at AIConf 2024: *"Building Production-Grade Agentic AI Systems at Scale"*
+  ~ [Recording ↗](#)
+`;
+
+export const MURATCAN_CSS_CONTENT = `/* Backbone CSS for Template 3 (Muratcan CV style) */
+
+/* Basic */
+
+${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: white;
+  color: black;
+  text-align: left;
+}
+
+${PREVIEW_SELECTOR} p,
+${PREVIEW_SELECTOR} li,
+${PREVIEW_SELECTOR} dl {
+  margin: 0;
+}
+
+/* Name */
+
+${PREVIEW_SELECTOR} h1 {
+  font-size: 1.85em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 1px;
+}
+
+/* Section headings — colored, bold, small-caps, with trailing rule */
+
+${PREVIEW_SELECTOR} h2 {
+  font-size: 0.92em;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: none;
+  margin-bottom: 3px;
+}
+
+${PREVIEW_SELECTOR} h2::after {
+  content: '';
+  flex: 1;
+  height: 0.6px;
+  background-color: currentColor;
+  opacity: 0.55;
+}
+
+/* ─── Definition lists ─── */
+
+${PREVIEW_SELECTOR} dl {
+  display: flex;
+  margin: 0;
+}
+
+${PREVIEW_SELECTOR} dl dt,
+${PREVIEW_SELECTOR} dl dd:not(:last-child) {
+  flex: 1;
+}
+
+${PREVIEW_SELECTOR} dl dd:last-child {
+  text-align: right;
+  white-space: nowrap;
+  padding-left: 8px;
+}
+
+/* Row 1: bold name left, bold date right */
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) dt { font-weight: bold; }
+${PREVIEW_SELECTOR} dl:has(dt > strong) dd { font-weight: bold; font-size: 0.9em; }
+
+/* Row 2: italic role left, italic location right */
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl dt { font-style: italic; }
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl dd { font-style: italic; font-size: 0.88em; }
+
+/* ─── Section content padding ─── */
+
+${PREVIEW_SELECTOR} dl,
+${PREVIEW_SELECTOR} p {
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+/* ─── Project name paragraphs (bold heading, no date row) ─── */
+
+${PREVIEW_SELECTOR} p:has(> strong:first-child) {
+  font-size: 1em;
+  margin-top: 4px;
+}
+
+/* ─── Bullet lists — colored bullet ─── */
+
+${PREVIEW_SELECTOR} ul {
+  list-style: none;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin: 0;
+}
+
+${PREVIEW_SELECTOR} ul li {
+  font-size: 0.88em;
+  margin-top: 2px;
+  padding-left: 1.1em;
+  position: relative;
+}
+
+${PREVIEW_SELECTOR} ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--resume-theme-color, #1a3c72);
+  font-weight: bold;
+}
+
+/* ─── Spacing ─── */
+
+${PREVIEW_SELECTOR} dl:has(dt > strong) + dl + dl {
+  margin-top: 5px;
+}
+
+${PREVIEW_SELECTOR} ul + dl {
+  margin-top: 5px;
+}
+
+${PREVIEW_SELECTOR} dl + ul {
+  margin-top: 2px;
+}
+
+${PREVIEW_SELECTOR} p + ul {
+  margin-top: 1px;
+}
+
+${PREVIEW_SELECTOR} :not(dl:has(dt > strong)) + dl:not(:has(dt > strong)) {
+  margin-top: 3px;
+}
+
+/* ─── Tex ─── */
+
+${PREVIEW_SELECTOR} :not(span.katex-display) > span.katex {
+  font-size: 1em !important;
+}
+
+/* ─── SVG & Images ─── */
+
+${PREVIEW_SELECTOR} svg.iconify {
+  vertical-align: -0.2em;
+}
+
+${PREVIEW_SELECTOR} img {
+  max-width: 100%;
+}
+
+/* ─── Header ─── */
+
+${PREVIEW_SELECTOR} .resume-header {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+${PREVIEW_SELECTOR} .resume-header h1 {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+${PREVIEW_SELECTOR} .resume-header-item {
+  font-size: 0.82em;
+}
+
+${PREVIEW_SELECTOR} .resume-header-item:not(.no-separator)::after {
+  content: " | ";
+}
+
+${PREVIEW_SELECTOR} .resume-header-item a {
+  color: var(--resume-theme-color, #1a3c72);
+  text-decoration: none;
+}
+
+/* Dark & print mode */
+
+.dark ${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+  background-color: hsl(213, 12%, 15%);
+  color: hsl(216, 12%, 84%);
+}
+
+@media print {
+  .dark ${PREVIEW_SELECTOR} [data-scope="vue-smart-pages"][data-part="page"] {
+    background-color: white;
+    color: black;
+  }
+}
+`;
+
 export const DEFAULT_CSS_CONTENT = `/* Backbone CSS for Resume Template 1 */
 
 /* Basic */

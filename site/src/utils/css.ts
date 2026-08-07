@@ -23,6 +23,7 @@ export class DynamicCssService {
 
   private themeColor = (selector: string, styles: ResumeStyles) => {
     return (
+      `${selector} { --resume-theme-color: ${styles.themeColor}; }` +
       `${selector} :not(.resume-header-item) > a { color: ${styles.themeColor}; }` +
       `${selector} h1, ${selector} h2, ${selector} h3 { color: ${styles.themeColor}; }` +
       `${selector} h2 { border-bottom-color: ${styles.themeColor}; }`

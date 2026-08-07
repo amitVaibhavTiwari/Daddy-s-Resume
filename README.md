@@ -1,4 +1,4 @@
-# Daddy's Resume
+# Daddy's Resume 
 
 This project is a fork of [Oh My CV!](https://github.com/Renovamen/oh-my-cv).
 

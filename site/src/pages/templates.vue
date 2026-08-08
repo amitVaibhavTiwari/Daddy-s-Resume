@@ -36,11 +36,12 @@
                 :href="t.sample"
                 target="_blank"
                 rel="noopener noreferrer"
+                download
                 class="h-8 px-3 text-xs font-medium inline-flex items-center gap-1 text-gray-600 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors"
                 :class="{ 'pointer-events-none opacity-40': !t.sample }"
               >
-                <span class="i-ic:baseline-open-in-new text-sm" />
-                Preview
+                <span class="i-ic:baseline-download text-sm" />
+                Download Preview
               </a>
             </div>
           </div>

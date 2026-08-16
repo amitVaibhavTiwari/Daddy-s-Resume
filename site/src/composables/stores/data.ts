@@ -6,6 +6,8 @@ export type SystemData = {
   loaded: boolean;
 };
 
+const DIRTY_KEYS: Array<keyof SystemData> = ["markdown", "css", "resumeName"];
+
 export const useDataStore = defineStore("data", () => {
   const { DEFAULT } = useConstant();
 
@@ -17,9 +19,12 @@ export const useDataStore = defineStore("data", () => {
     loaded: false
   });
 
+  const isDirty = ref(false);
+
   const setData = <T extends keyof SystemData>(key: T, value: SystemData[T]) => {
     data[key] = value;
     if (key === "css") dynamicCssService.injectCssEditor(value as string);
+    if (DIRTY_KEYS.includes(key)) isDirty.value = true;
   };
 
   const setAndSyncToMonaco = (key: "markdown" | "css", value: string) => {
@@ -29,9 +34,20 @@ export const useDataStore = defineStore("data", () => {
     setContent(key, value);
   };
 
+  const markDirty = () => {
+    isDirty.value = true;
+  };
+
+  const markSaved = () => {
+    isDirty.value = false;
+  };
+
   return {
     data,
     setData,
-    setAndSyncToMonaco
+    setAndSyncToMonaco,
+    isDirty,
+    markDirty,
+    markSaved
   };
 });

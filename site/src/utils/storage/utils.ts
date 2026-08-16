@@ -24,7 +24,7 @@ const setResumeStyles = async (styles: ResumeStyles) => {
  * @param data resume data
  */
 export const setResume = async (data: DbResume) => {
-  const { setData } = useDataStore();
+  const { setData, markSaved } = useDataStore();
 
   setData("resumeId", data.id);
   setData("resumeName", data.name);
@@ -33,6 +33,8 @@ export const setResume = async (data: DbResume) => {
   setData("css", data.css);
 
   await setResumeStyles(data.styles);
+
+  markSaved();
 };
 
 const _checkType = (value: any, required: string | string[]) => {

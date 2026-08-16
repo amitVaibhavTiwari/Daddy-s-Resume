@@ -57,15 +57,40 @@
 
 <script lang="ts" setup>
 import { isInteger } from "@renovamen/utils";
+import { onBeforeRouteLeave } from "vue-router";
 
 const route = useRoute();
-const { data } = useDataStore();
+const dataStore = useDataStore();
+const { data } = dataStore;
 
 // Fetch resume data
 onMounted(() => {
   if (isInteger(route.params.id, { allowString: true })) {
     storageService.switchToResume(Number(route.params.id));
   }
+});
+
+// Warn on unsaved changes: reload, close tab, external navigation
+const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+  if (!dataStore.isDirty) return;
+  e.preventDefault();
+  e.returnValue = "";
+};
+
+onMounted(() => {
+  window.addEventListener("beforeunload", handleBeforeUnload);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("beforeunload", handleBeforeUnload);
+});
+
+// Warn on unsaved changes: internal SPA navigation (e.g. header links)
+onBeforeRouteLeave(() => {
+  if (!dataStore.isDirty) return true;
+  return window.confirm(
+    "You have unsaved changes to your resume. If you leave this page, those changes will be lost. Are you sure you want to leave?"
+  );
 });
 
 // Toogle toolbar

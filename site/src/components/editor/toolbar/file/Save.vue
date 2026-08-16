@@ -14,7 +14,8 @@
 <script lang="ts" setup>
 import { useShortcuts } from "@ohmycv/vue-shortcuts";
 
-const { data } = useDataStore();
+const dataStore = useDataStore();
+const { data } = dataStore;
 const { styles } = useStyleStore();
 
 const save = async () => {
@@ -27,6 +28,8 @@ const save = async () => {
     css: data.css,
     styles: toRaw(styles)
   });
+
+  dataStore.markSaved();
 };
 
 // Use the shortcut to save the current resume

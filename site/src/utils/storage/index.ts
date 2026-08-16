@@ -158,7 +158,7 @@ export class StorageService {
       data
     };
 
-    downloadFile("ohmycv_data.json", JSON.stringify(json));
+    downloadFile("daddys_resume_data.json", JSON.stringify(json));
   }
 
   public async getSyncData(): Promise<StorageJson> {

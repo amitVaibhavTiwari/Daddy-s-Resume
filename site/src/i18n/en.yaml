@@ -24,8 +24,8 @@ dashboard:
   created: "Created: "
   updated: "Updated: "
   new: New
-  saveas: Save as...
-  import: Import from...
+  saveas: Export JSON Data
+  import: Import JSON Data
   rename: Rename
   duplicate: Duplicate
   delete: Delete
@@ -35,6 +35,21 @@ dashboard:
     placeholder: Type 'delete' to confirm
     button: Delete Resume
   cancel: Cancel
+  confirm: I understand, continue
+  drive_sync:
+    sync:
+      title: Sync to Google Drive
+      message: This creates a file in your Google Drive containing all your resume data. If you switch to a new device later, your resumes stay safe there and you can restore them anytime using Import from Drive.
+    import:
+      title: Import from Google Drive
+      message: If you've previously synced your resumes to Google Drive, this loads them back here just as they were at your last sync. Make sure you're signed in with the same Google account you used to sync.
+  file:
+    export:
+      title: Export JSON Data
+      message: If you don't want to use Google Drive sync, this downloads all your resume data as a JSON file. Keep it somewhere safe, you can import it back anytime on this device or any other.
+    import:
+      title: Import JSON Data
+      message: This restores your resume data from a JSON file you previously exported from Daddy's Resume. Only pick a file that was exported from this app, other JSON files won't work.
 
 toolbar:
   file:

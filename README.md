@@ -1,5 +1,7 @@
 # Daddy's Resume
 
+This is an independent fork of [Oh My CV!](https://github.com/Renovamen/oh-my-cv).
+
 Free, open-source Markdown resume builder. Write in Markdown, preview as PDF in real time, export with one click. No login, no tracking, no data leaves your browser.
 
 **[daddysresume.amitvaibhavtiwari.dev](https://daddysresume.amitvaibhavtiwari.dev)**

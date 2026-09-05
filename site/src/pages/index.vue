@@ -4,13 +4,11 @@
 
     <section class="px-6 pt-20 pb-16 text-center max-w-4xl mx-auto">
       <h1 class="text-[3rem] sm:text-[4rem] font-bold text-gray-900 leading-[1.17] tracking-tight mb-7">
-        Write your resume in Markdown,<br/>the quick and easy way.
+        Make your resumes<br/>the quick and easy way.
       </h1>
       <p class="text-lg text-gray-500 leading-relaxed mb-10 max-w-2xl mx-auto">
-        <strong class="font-semibold text-gray-700">Daddy's Resume</strong> is a free, open-source
-        Markdown resume builder. Create resumes in Markdown using ATS-friendly templates, preview
-        as PDF in real time, and export with one click, while your data stays private in your
-        browser with optional Google Drive sync.
+        Create resumes in Markdown using ATS-friendly templates. Preview in real time, export to PDF
+        and keep your data private in your browser with optional Google Drive sync.
       </p>
       <div class="flex items-center justify-center gap-3 flex-wrap">
         <UiButton

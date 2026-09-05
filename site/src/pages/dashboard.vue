@@ -47,6 +47,12 @@
 <script lang="ts" setup>
 import type { DbResume } from "~/utils/storage";
 
+useSeo({
+  title: "My Resumes | Daddy's Resume",
+  description: "Manage the resumes you have created with Daddy's Resume.",
+  noindex: true
+});
+
 const {
   data: resumes,
   refresh,

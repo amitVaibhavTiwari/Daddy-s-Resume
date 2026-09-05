@@ -3,10 +3,14 @@
     <SharedHeader />
 
     <div class="max-w-[1500px] mx-auto px-6 lg:px-10 pt-10 pb-16">
-      <!-- Heading -->
       <div class="mb-8">
-        <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1">Templates</h1>
-        <p class="text-gray-400 text-sm">Pick a starting point. Customize everything from there.</p>
+        <h1 class="text-2xl font-bold text-gray-900 tracking-tight mb-1">
+          ATS-Friendly Markdown Resume Templates
+        </h1>
+        <p class="text-gray-400 text-sm">
+          Free, ATS-friendly templates for Daddy's Resume. Pick a starting point, write in Markdown,
+          and customize everything from there.
+        </p>
       </div>
 
       <!-- Cards -->
@@ -54,18 +58,6 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: "Free ATS-Friendly Markdown Resume Templates | Daddy's Resume",
-  meta: [
-    { name: "description", content: "Browse free ATS-friendly Markdown resume templates. Pick a template, write your resume in Markdown, preview as PDF in real time, and export with one click. No signup required." },
-    { name: "keywords", content: "markdown resume templates, ATS friendly resume templates, free resume templates, markdown resume, software engineer resume template" },
-    { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
-    { property: "og:title", content: "Free ATS-Friendly Markdown Resume Templates | Daddy's Resume" },
-    { property: "og:description", content: "Browse free ATS-friendly Markdown resume templates. Write in Markdown, preview as PDF, export with one click. No signup required." },
-    { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev/templates" }
-  ]
-});
-
 const { TEMPLATES: tplContent } = useConstant();
 const fullTemplate = (id: string) => tplContent.find(t => t.id === id)!;
 
@@ -100,6 +92,48 @@ const templates = [
     sample: "/Template-3.pdf"
   }
 ];
+
+useSeo({
+  title: "Free ATS-Friendly Markdown Resume Templates | Daddy's Resume",
+  description:
+    "Browse free ATS-friendly Markdown resume templates from Daddy's Resume. Pick a template, write your resume in Markdown, preview as PDF in real time, and export with one click. No signup required.",
+  keywords:
+    "markdown resume templates, ATS friendly resume templates, free resume templates, markdown resume, software engineer resume template, daddys resume templates",
+  image: "/template-1.webp",
+  imageAlt: "ATS-friendly Markdown resume templates",
+  schema: [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Daddy's Resume",
+          "item": `${SITE_URL}/`
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resume Templates",
+          "item": `${SITE_URL}/templates/`
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Free ATS-friendly Markdown resume templates",
+      "itemListElement": templates.map((t, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": `${t.name} — inspired by ${t.inspired}`,
+        "description": t.desc,
+        "url": `${SITE_URL}/templates/`
+      }))
+    }
+  ]
+});
 
 const useTemplate = async (id: string) => {
   creating.value = id;

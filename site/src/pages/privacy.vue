@@ -71,10 +71,9 @@
 </template>
 
 <script setup lang="ts">
-useHead({
+useSeo({
   title: "Privacy Policy | Daddy's Resume",
-  meta: [
-    { name: "description", content: "Privacy policy for Daddy's Resume. We collect no personal data. All resume data stays in your browser." }
-  ]
+  description:
+    "Privacy policy for Daddy's Resume. We collect no personal data. All resume data stays in your browser."
 });
 </script>

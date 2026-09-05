@@ -1,20 +1,33 @@
+# Daddy's Resume — https://daddysresume.amitvaibhavtiwari.dev
+
 User-agent: *
 Allow: /
-Allow: /templates
-Allow: /privacy
-Allow: /terms
-Disallow: /dashboard
-Disallow: /editor/
 
-# Google
+# Build artefacts — nothing useful to index, and crawling them wastes budget.
+Disallow: /_nuxt/
+Disallow: /_payload.json
+Disallow: /200.html
+
+# Search engines
 User-agent: Googlebot
 Allow: /
 
-# Bing
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
-# ChatGPT / OpenAI
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI crawlers and answer engines
 User-agent: GPTBot
 Allow: /
 
@@ -24,34 +37,54 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Anthropic / Claude
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-# Perplexity
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-# You.com
-User-agent: YouBot
+User-agent: Perplexity-User
 Allow: /
 
-# Meta AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: meta-externalagent
 Allow: /
 
-# Apple
-User-agent: Applebot
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: YouBot
 Allow: /
 
 User-agent: CCBot
 Allow: /
 
-# Cohere
 User-agent: cohere-ai
 Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 Sitemap: https://daddysresume.amitvaibhavtiwari.dev/sitemap.xml

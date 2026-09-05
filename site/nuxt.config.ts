@@ -68,24 +68,33 @@ export default defineNuxtConfig({
         { name: "application-name", content: "Daddy's Resume" },
         { name: "apple-mobile-web-app-title", content: "Daddy's Resume" },
         { name: "msapplication-TileColor", content: "#fff" },
-        { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
-        { name: "author", content: "Daddy's Resume" },
-        { property: "og:url", content: "https://daddysresume.amitvaibhavtiwari.dev" },
-        { property: "og:type", content: "website" },
-        { property: "og:image", content: "https://daddysresume.amitvaibhavtiwari.dev/editor.png" },
+        { name: "author", content: "Amit Vaibhav Tiwari" },
+        { name: "publisher", content: "Daddy's Resume" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
-        { property: "og:image:alt", content: "Daddy's Resume - Free Markdown Resume Builder" },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:image", content: "https://daddysresume.amitvaibhavtiwari.dev/editor.png" },
-        { name: "twitter:title", content: "Markdown Resume Builder - Free & Open Source | Daddy's Resume" },
-        { name: "twitter:description", content: "Write your resume in Markdown, preview as PDF in real time, export with one click. ATS-friendly templates. No signup. Free & open source." }
+        { name: "format-detection", content: "telephone=no" }
       ]
     }
   },
 
   site: {
-    url: "https://daddysresume.amitvaibhavtiwari.dev"
+    url: "https://daddysresume.amitvaibhavtiwari.dev",
+    name: "Daddy's Resume",
+    trailingSlash: true
+  },
+
+  sitemap: {
+    autoI18n: false,
+    inferStaticPagesAsRoutes: false,
+    autoLastmod: true,
+    credits: false,
+    defaults: { changefreq: "weekly", priority: 0.8 },
+    urls: [
+      { loc: "/", changefreq: "weekly", priority: 1.0 },
+      { loc: "/templates/", changefreq: "weekly", priority: 0.9 },
+      { loc: "/privacy/", changefreq: "yearly", priority: 0.3 },
+      { loc: "/terms/", changefreq: "yearly", priority: 0.3 }
+    ]
   },
 
   pwa,

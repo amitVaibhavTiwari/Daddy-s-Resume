@@ -34,10 +34,6 @@ useHead({
       rel: "icon",
       type: "image/png",
       href: "/daddys-resume-logo.png"
-    },
-    {
-      rel: "canonical",
-      href: "https://daddysresume.amitvaibhavtiwari.dev"
     }
   ],
   script: [

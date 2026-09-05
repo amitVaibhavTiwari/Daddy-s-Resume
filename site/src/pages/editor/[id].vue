@@ -62,6 +62,11 @@ import { onBeforeRouteLeave } from "vue-router";
 const route = useRoute();
 const dataStore = useDataStore();
 const { data } = dataStore;
+useSeo({
+  title: "Resume Editor | Daddy's Resume",
+  description: "Write and edit your resume in Markdown with a live PDF preview.",
+  noindex: true
+});
 
 // Fetch resume data
 onMounted(() => {

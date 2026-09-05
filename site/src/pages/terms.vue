@@ -70,10 +70,9 @@
 </template>
 
 <script setup lang="ts">
-useHead({
+useSeo({
   title: "Terms of Use | Daddy's Resume",
-  meta: [
-    { name: "description", content: "Terms of use for Daddy's Resume — free, open-source Markdown resume builder." }
-  ]
+  description:
+    "Terms of use for Daddy's Resume — free, open-source Markdown resume builder."
 });
 </script>

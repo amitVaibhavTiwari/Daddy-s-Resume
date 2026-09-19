@@ -1,7 +1,5 @@
 # Daddy's Resume
 
-This is an independent fork of [Oh My CV!](https://github.com/Renovamen/oh-my-cv).
-
 Free, open-source Markdown resume builder. Write in Markdown, preview as PDF in real time, export with one click. No login, no tracking, no data leaves your browser.
 
 **[daddysresume.amitvaibhavtiwari.dev](https://daddysresume.amitvaibhavtiwari.dev)**
@@ -34,18 +32,18 @@ Free, open-source Markdown resume builder. Write in Markdown, preview as PDF in 
 Contributions are welcome. See [Contributing Guide](.github/CONTRIBUTING.md).
 
 
+## Why I Built This
+
+This project is an independent fork of [Oh My CV!](https://github.com/Renovamen/oh-my-cv).
+
+I was using Oh My CV! for my resumes when I accidentally lost one without a confirmation prompt. I started improving it to prevent that from happening again, and eventually added the features I wanted for my own resume workflow.
+
 ## Credits
 
 - [Oh My CV!](https://github.com/Renovamen/oh-my-cv) by Renovamen, the original project this is built on top of
 - [billryan/resume](https://github.com/billryan/resume), basis for Template 1
 - [Jake's Resume](https://github.com/jakegut/resume) by Jake Gutierrez, basis for Template 2
 - [AlexW00/CV](https://github.com/AlexW00/CV) by Alexander Weichart, inspiration for Template 3
-
-
-## Why I Built This
-
-I was using Oh My CV! for my resumes when I accidentally lost one without a confirmation prompt. I started improving it to prevent that from happening again, and eventually added the features I wanted for my own resume workflow.
-
 
 ## License
 

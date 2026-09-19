@@ -25,6 +25,8 @@ interface SeoOptions {
   schema?: Record<string, unknown>[];
 }
 
+const NON_DEFAULT_LOCALE_PREFIXES = ["/sp/", "/zh-cn/"];
+
 export const useSeo = (options: SeoOptions | Ref<SeoOptions>) => {
   const route = useRoute();
   const opts = computed(() => (isRef(options) ? options.value : options));
@@ -36,8 +38,13 @@ export const useSeo = (options: SeoOptions | Ref<SeoOptions>) => {
     return img.startsWith("http") ? img : `${SITE_URL}${img}`;
   });
 
+  // Auto-noindex non-English locale pages until they are translated.
+  const isLocaleVariant = computed(() =>
+    NON_DEFAULT_LOCALE_PREFIXES.some((prefix) => route.path.startsWith(prefix))
+  );
+
   const robots = computed(() =>
-    opts.value.noindex
+    opts.value.noindex || isLocaleVariant.value
       ? "noindex, nofollow"
       : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   );

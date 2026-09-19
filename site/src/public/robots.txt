@@ -3,6 +3,9 @@
 User-agent: *
 Allow: /
 
+Disallow: /sp/
+Disallow: /zh-cn/
+
 # Build artefacts — nothing useful to index, and crawling them wastes budget.
 Disallow: /_nuxt/
 Disallow: /_payload.json

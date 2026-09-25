@@ -1,5 +1,6 @@
 import { pwa } from "./configs/pwa";
 import { i18n } from "./configs/i18n";
+import { indexableSitemapEntries, SITE_URL } from "./src/composables/constant/seo";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -78,7 +79,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://daddysresume.amitvaibhavtiwari.dev",
+    url: SITE_URL,
     name: "Daddy's Resume",
     trailingSlash: true
   },
@@ -89,12 +90,7 @@ export default defineNuxtConfig({
     autoLastmod: true,
     credits: false,
     defaults: { changefreq: "weekly", priority: 0.8 },
-    urls: [
-      { loc: "/", changefreq: "weekly", priority: 1.0 },
-      { loc: "/templates/", changefreq: "weekly", priority: 0.9 },
-      { loc: "/privacy/", changefreq: "yearly", priority: 0.3 },
-      { loc: "/terms/", changefreq: "yearly", priority: 0.3 }
-    ]
+    urls: indexableSitemapEntries
   },
 
   pwa,

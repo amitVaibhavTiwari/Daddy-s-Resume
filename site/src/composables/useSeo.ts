@@ -1,14 +1,18 @@
 import type { Ref } from "vue";
+import { LEGACY_LOCALE_PREFIXES, SITE_URL } from "~/composables/constant/seo";
 
-export const SITE_URL = "https://daddysresume.amitvaibhavtiwari.dev";
+export { SITE_URL };
 export const SITE_NAME = "Daddy's Resume";
-
-const LOCALE_PREFIXES = ["en", "sp", "zh-cn"];
 
 export const canonicalPath = (path: string) => {
   const segments = path.split("/").filter(Boolean);
 
-  if (segments.length && LOCALE_PREFIXES.includes(segments[0]!)) segments.shift();
+  if (
+    segments.length &&
+    (LEGACY_LOCALE_PREFIXES as readonly string[]).includes(segments[0]!)
+  ) {
+    segments.shift();
+  }
 
   return segments.length ? `/${segments.join("/")}/` : "/";
 };
@@ -25,10 +29,9 @@ interface SeoOptions {
   schema?: Record<string, unknown>[];
 }
 
-const NON_DEFAULT_LOCALE_PREFIXES = ["/sp/", "/zh-cn/"];
-
 export const useSeo = (options: SeoOptions | Ref<SeoOptions>) => {
   const route = useRoute();
+  const { locale } = useI18n();
   const opts = computed(() => (isRef(options) ? options.value : options));
 
   const url = computed(() => canonicalUrl(route.path));
@@ -38,13 +41,11 @@ export const useSeo = (options: SeoOptions | Ref<SeoOptions>) => {
     return img.startsWith("http") ? img : `${SITE_URL}${img}`;
   });
 
-  // Auto-noindex non-English locale pages until they are translated.
-  const isLocaleVariant = computed(() =>
-    NON_DEFAULT_LOCALE_PREFIXES.some((prefix) => route.path.startsWith(prefix))
-  );
+  // Non-English routes use locale-prefixed URLs but route.path stays "/".
+  const isNonEnglishLocale = computed(() => locale.value !== "en");
 
   const robots = computed(() =>
-    opts.value.noindex || isLocaleVariant.value
+    opts.value.noindex || isNonEnglishLocale.value
       ? "noindex, nofollow"
       : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
   );

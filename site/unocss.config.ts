@@ -7,6 +7,7 @@ import {
   transformerDirectives,
   transformerVariantGroup
 } from "unocss";
+import { dormantLocales } from "./configs/i18n.dormant-locales";
 import { i18n } from "./configs/i18n";
 import presetAnimations from "unocss-preset-animations";
 import { presetShadcn } from "unocss-preset-shadcn";
@@ -119,5 +120,5 @@ export default defineConfig({
     }
   },
   // @ts-expect-error icon is a customized key
-  safelist: i18n.locales.map((item) => item.icon)
+  safelist: [...i18n.locales!, ...dormantLocales].map((item) => item.icon)
 });

@@ -31,6 +31,9 @@ Author: Amit Vaibhav Tiwari (https://amitvaibhavtiwari.dev)
 
 ## Pages
 
+Indexable public routes only (same list as `site/src/composables/constant/seo.ts` and `sitemap.xml`).
+App-only and locale-prefixed routes are omitted.
+
 - [Home](https://daddysresume.amitvaibhavtiwari.dev/): what the tool is and FAQ
 - [Templates](https://daddysresume.amitvaibhavtiwari.dev/templates/): free ATS-friendly Markdown resume templates
 - [Privacy Policy](https://daddysresume.amitvaibhavtiwari.dev/privacy/)
